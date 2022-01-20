@@ -1,0 +1,5068 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/Microsoft365DSC/resources/intune/IntuneDeviceConfigurationPolicyWindows10/">
+      
+      <link rel="icon" href="../../../Images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.7">
+    
+    
+      
+        <title>IntuneDeviceConfigurationPolicyWindows10 - Microsoft365DSC - Your Cloud Configuration</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.cd566b2a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-209929913-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#intunedeviceconfigurationpolicywindows10" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+  <!-- Add announcement here, including arbitrary HTML -->
+  <div class="md-container"><span>Check out our <a href="https://www.youtube.com/channel/UCveScabVT6pxzqYgGRu17iw" >YouTube channel</a></span></div>
+
+          </div>
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Microsoft365DSC - Your Cloud Configuration" class="md-header__button md-logo" aria-label="Microsoft365DSC - Your Cloud Configuration" data-md-component="logo">
+      
+  <img src="../../../Images/SmallLogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Microsoft365DSC - Your Cloud Configuration
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IntuneDeviceConfigurationPolicyWindows10
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/Microsoft365DSC/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../user-guide/get-started/complete-story/" class="md-tabs__link">
+        User Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../contributing/contribution-guidelines/" class="md-tabs__link">
+        Contributing
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../concepts/breaking-changes/" class="md-tabs__link">
+        Concepts
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link md-tabs__link--active">
+        Resources
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/why/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Microsoft365DSC - Your Cloud Configuration" class="md-nav__button md-logo" aria-label="Microsoft365DSC - Your Cloud Configuration" data-md-component="logo">
+      
+  <img src="../../../Images/SmallLogo.png" alt="logo">
+
+    </a>
+    Microsoft365DSC - Your Cloud Configuration
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/Microsoft365DSC/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/what-is-M365DSC/" class="md-nav__link">
+        What is Microsoft365DSC?
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/get-started/complete-story/" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/advanced/create-blueprint/" class="md-nav__link">
+        Advanced
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Contributing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contributing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Contributing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/contribution-guidelines/" class="md-nav__link">
+        Guidelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/getting-started/" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/develop-new-resource/" class="md-nav__link">
+        Develop a New Resource
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Concepts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/breaking-changes/" class="md-nav__link">
+        Breaking Changes Policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/odsp-permissions/" class="md-nav__link">
+        OneDrive & SharePoint Permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/consent-flow/" class="md-nav__link">
+        Consent Flow
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Azure AD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Azure AD" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Azure AD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure-ad/AADApplication/" class="md-nav__link">
+        AADApplication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure-ad/AADConditionalAccessPolicy/" class="md-nav__link">
+        AADConditionalAccessPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure-ad/AADGroup/" class="md-nav__link">
+        AADGroup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure-ad/AADGroupLifecyclePolicy/" class="md-nav__link">
+        AADGroupLifecyclePolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure-ad/AADGroupsNamingPolicy/" class="md-nav__link">
+        AADGroupsNamingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure-ad/AADGroupsSettings/" class="md-nav__link">
+        AADGroupsSettings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure-ad/AADNamedLocationPolicy/" class="md-nav__link">
+        AADNamedLocationPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure-ad/AADRoleDefinition/" class="md-nav__link">
+        AADRoleDefinition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure-ad/AADServicePrincipal/" class="md-nav__link">
+        AADServicePrincipal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure-ad/AADTenantDetails/" class="md-nav__link">
+        AADTenantDetails
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure-ad/AADTokenLifetimePolicy/" class="md-nav__link">
+        AADTokenLifetimePolicy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          Exchange
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exchange" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Exchange
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOAcceptedDomain/" class="md-nav__link">
+        EXOAcceptedDomain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOActiveSyncDeviceAccessRule/" class="md-nav__link">
+        EXOActiveSyncDeviceAccessRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOAddressBookPolicy/" class="md-nav__link">
+        EXOAddressBookPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOAddressList/" class="md-nav__link">
+        EXOAddressList
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOAntiPhishPolicy/" class="md-nav__link">
+        EXOAntiPhishPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOAntiPhishRule/" class="md-nav__link">
+        EXOAntiPhishRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOApplicationAccessPolicy/" class="md-nav__link">
+        EXOApplicationAccessPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOAtpPolicyForO365/" class="md-nav__link">
+        EXOAtpPolicyForO365
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOAvailabilityAddressSpace/" class="md-nav__link">
+        EXOAvailabilityAddressSpace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOAvailabilityConfig/" class="md-nav__link">
+        EXOAvailabilityConfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOCASMailboxPlan/" class="md-nav__link">
+        EXOCASMailboxPlan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOClientAccessRule/" class="md-nav__link">
+        EXOClientAccessRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXODkimSigningConfig/" class="md-nav__link">
+        EXODkimSigningConfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOEmailAddressPolicy/" class="md-nav__link">
+        EXOEmailAddressPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOGlobalAddressList/" class="md-nav__link">
+        EXOGlobalAddressList
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOHostedConnectionFilterPolicy/" class="md-nav__link">
+        EXOHostedConnectionFilterPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOHostedContentFilterPolicy/" class="md-nav__link">
+        EXOHostedContentFilterPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOHostedContentFilterRule/" class="md-nav__link">
+        EXOHostedContentFilterRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOHostedOutboundSpamFilterPolicy/" class="md-nav__link">
+        EXOHostedOutboundSpamFilterPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOHostedOutboundSpamFilterRule/" class="md-nav__link">
+        EXOHostedOutboundSpamFilterRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOInboundConnector/" class="md-nav__link">
+        EXOInboundConnector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOIntraOrganizationConnector/" class="md-nav__link">
+        EXOIntraOrganizationConnector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOJournalRule/" class="md-nav__link">
+        EXOJournalRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOMailTips/" class="md-nav__link">
+        EXOMailTips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOMailboxSettings/" class="md-nav__link">
+        EXOMailboxSettings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOMalwareFilterPolicy/" class="md-nav__link">
+        EXOMalwareFilterPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOMalwareFilterRule/" class="md-nav__link">
+        EXOMalwareFilterRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOManagementRole/" class="md-nav__link">
+        EXOManagementRole
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOMobileDeviceMailboxPolicy/" class="md-nav__link">
+        EXOMobileDeviceMailboxPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOOfflineAddressBook/" class="md-nav__link">
+        EXOOfflineAddressBook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOOnPremisesOrganization/" class="md-nav__link">
+        EXOOnPremisesOrganization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOOrganizationConfig/" class="md-nav__link">
+        EXOOrganizationConfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOOrganizationRelationship/" class="md-nav__link">
+        EXOOrganizationRelationship
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOOutboundConnector/" class="md-nav__link">
+        EXOOutboundConnector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOOwaMailboxPolicy/" class="md-nav__link">
+        EXOOwaMailboxPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOPartnerApplication/" class="md-nav__link">
+        EXOPartnerApplication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOPolicyTipConfig/" class="md-nav__link">
+        EXOPolicyTipConfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXORemoteDomain/" class="md-nav__link">
+        EXORemoteDomain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXORoleAssignmentPolicy/" class="md-nav__link">
+        EXORoleAssignmentPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOSafeAttachmentPolicy/" class="md-nav__link">
+        EXOSafeAttachmentPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOSafeAttachmentRule/" class="md-nav__link">
+        EXOSafeAttachmentRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOSafeLinksPolicy/" class="md-nav__link">
+        EXOSafeLinksPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOSafeLinksRule/" class="md-nav__link">
+        EXOSafeLinksRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOSharedMailbox/" class="md-nav__link">
+        EXOSharedMailbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOSharingPolicy/" class="md-nav__link">
+        EXOSharingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exchange/EXOTransportRule/" class="md-nav__link">
+        EXOTransportRule
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Intune
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Intune" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Intune
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntuneAppConfigurationPolicy/" class="md-nav__link">
+        IntuneAppConfigurationPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntuneAppProtectionPolicyiOS/" class="md-nav__link">
+        IntuneAppProtectionPolicyiOS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntuneDeviceCategory/" class="md-nav__link">
+        IntuneDeviceCategory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntuneDeviceCompliancePolicyAndroid/" class="md-nav__link">
+        IntuneDeviceCompliancePolicyAndroid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntuneDeviceCompliancePolicyAndroidDeviceOwner/" class="md-nav__link">
+        IntuneDeviceCompliancePolicyAndroidDeviceOwner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntuneDeviceCompliancePolicyAndroidWorkProfile/" class="md-nav__link">
+        IntuneDeviceCompliancePolicyAndroidWorkProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntuneDeviceCompliancePolicyMacOS/" class="md-nav__link">
+        IntuneDeviceCompliancePolicyMacOS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntuneDeviceCompliancePolicyWindows10/" class="md-nav__link">
+        IntuneDeviceCompliancePolicyWindows10
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntuneDeviceCompliancePolicyiOs/" class="md-nav__link">
+        IntuneDeviceCompliancePolicyiOs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntuneDeviceConfigurationPolicyAndroidWorkProfile/" class="md-nav__link">
+        IntuneDeviceConfigurationPolicyAndroidWorkProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          IntuneDeviceConfigurationPolicyWindows10
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        IntuneDeviceConfigurationPolicyWindows10
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntuneDeviceConfigurationPolicyiOS/" class="md-nav__link">
+        IntuneDeviceConfigurationPolicyiOS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntuneDeviceEnrollmentLimitRestriction/" class="md-nav__link">
+        IntuneDeviceEnrollmentLimitRestriction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IntuneDeviceEnrollmentPlatformRestriction/" class="md-nav__link">
+        IntuneDeviceEnrollmentPlatformRestriction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          Office365
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Office365" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Office365
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office365/O365AdminAuditLogConfig/" class="md-nav__link">
+        O365AdminAuditLogConfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office365/O365Group/" class="md-nav__link">
+        O365Group
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office365/O365OrgCustomizationSetting/" class="md-nav__link">
+        O365OrgCustomizationSetting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../office365/O365User/" class="md-nav__link">
+        O365User
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
+          OneDrive
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="OneDrive" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          OneDrive
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../onedrive/ODSettings/" class="md-nav__link">
+        ODSettings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7">
+          Planner
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Planner" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          Planner
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planner/PlannerBucket/" class="md-nav__link">
+        PlannerBucket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planner/PlannerPlan/" class="md-nav__link">
+        PlannerPlan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../planner/PlannerTask/" class="md-nav__link">
+        PlannerTask
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_8" type="checkbox" id="__nav_5_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_8">
+          Power Platform
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Power Platform" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          Power Platform
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../power-platform/PPPowerAppsEnvironment/" class="md-nav__link">
+        PPPowerAppsEnvironment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../power-platform/PPTenantSettings/" class="md-nav__link">
+        PPTenantSettings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_9" type="checkbox" id="__nav_5_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_9">
+          Security & Compliance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Security & Compliance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_9">
+          <span class="md-nav__icon md-icon"></span>
+          Security & Compliance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCAuditConfigurationPolicy/" class="md-nav__link">
+        SCAuditConfigurationPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCCaseHoldPolicy/" class="md-nav__link">
+        SCCaseHoldPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCCaseHoldRule/" class="md-nav__link">
+        SCCaseHoldRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCComplianceCase/" class="md-nav__link">
+        SCComplianceCase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCComplianceSearch/" class="md-nav__link">
+        SCComplianceSearch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCComplianceSearchAction/" class="md-nav__link">
+        SCComplianceSearchAction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCComplianceTag/" class="md-nav__link">
+        SCComplianceTag
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCDLPCompliancePolicy/" class="md-nav__link">
+        SCDLPCompliancePolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCDLPComplianceRule/" class="md-nav__link">
+        SCDLPComplianceRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCDeviceConditionalAccessPolicy/" class="md-nav__link">
+        SCDeviceConditionalAccessPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCDeviceConfigurationPolicy/" class="md-nav__link">
+        SCDeviceConfigurationPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCFilePlanPropertyAuthority/" class="md-nav__link">
+        SCFilePlanPropertyAuthority
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCFilePlanPropertyCategory/" class="md-nav__link">
+        SCFilePlanPropertyCategory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCFilePlanPropertyCitation/" class="md-nav__link">
+        SCFilePlanPropertyCitation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCFilePlanPropertyDepartment/" class="md-nav__link">
+        SCFilePlanPropertyDepartment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCFilePlanPropertyReferenceId/" class="md-nav__link">
+        SCFilePlanPropertyReferenceId
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCFilePlanPropertySubCategory/" class="md-nav__link">
+        SCFilePlanPropertySubCategory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCLabelPolicy/" class="md-nav__link">
+        SCLabelPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCRetentionCompliancePolicy/" class="md-nav__link">
+        SCRetentionCompliancePolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCRetentionComplianceRule/" class="md-nav__link">
+        SCRetentionComplianceRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCRetentionEventType/" class="md-nav__link">
+        SCRetentionEventType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCSensitivityLabel/" class="md-nav__link">
+        SCSensitivityLabel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCSupervisoryReviewPolicy/" class="md-nav__link">
+        SCSupervisoryReviewPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-compliance/SCSupervisoryReviewRule/" class="md-nav__link">
+        SCSupervisoryReviewRule
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_10" type="checkbox" id="__nav_5_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_10">
+          SharePoint
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SharePoint" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_10">
+          <span class="md-nav__icon md-icon"></span>
+          SharePoint
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOAccessControlSettings/" class="md-nav__link">
+        SPOAccessControlSettings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOApp/" class="md-nav__link">
+        SPOApp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOBrowserIdleSignout/" class="md-nav__link">
+        SPOBrowserIdleSignout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOHomeSite/" class="md-nav__link">
+        SPOHomeSite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOHubSite/" class="md-nav__link">
+        SPOHubSite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOOrgAssetsLibrary/" class="md-nav__link">
+        SPOOrgAssetsLibrary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOPropertyBag/" class="md-nav__link">
+        SPOPropertyBag
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOSearchManagedProperty/" class="md-nav__link">
+        SPOSearchManagedProperty
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOSearchResultSource/" class="md-nav__link">
+        SPOSearchResultSource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOSharingSettings/" class="md-nav__link">
+        SPOSharingSettings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOSite/" class="md-nav__link">
+        SPOSite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOSiteAuditSettings/" class="md-nav__link">
+        SPOSiteAuditSettings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOSiteDesign/" class="md-nav__link">
+        SPOSiteDesign
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOSiteDesignRights/" class="md-nav__link">
+        SPOSiteDesignRights
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOSiteGroup/" class="md-nav__link">
+        SPOSiteGroup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOSiteScript/" class="md-nav__link">
+        SPOSiteScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOStorageEntity/" class="md-nav__link">
+        SPOStorageEntity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOTenantCDNPolicy/" class="md-nav__link">
+        SPOTenantCDNPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOTenantCdnEnabled/" class="md-nav__link">
+        SPOTenantCdnEnabled
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOTenantSettings/" class="md-nav__link">
+        SPOTenantSettings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOTheme/" class="md-nav__link">
+        SPOTheme
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharepoint/SPOUserProfileProperty/" class="md-nav__link">
+        SPOUserProfileProperty
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_11" type="checkbox" id="__nav_5_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_11">
+          Teams
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teams" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_11">
+          <span class="md-nav__icon md-icon"></span>
+          Teams
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsCallingPolicy/" class="md-nav__link">
+        TeamsCallingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsChannel/" class="md-nav__link">
+        TeamsChannel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsChannelTab/" class="md-nav__link">
+        TeamsChannelTab
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsChannelsPolicy/" class="md-nav__link">
+        TeamsChannelsPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsClientConfiguration/" class="md-nav__link">
+        TeamsClientConfiguration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsEmergencyCallRoutingPolicy/" class="md-nav__link">
+        TeamsEmergencyCallRoutingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsEmergencyCallingPolicy/" class="md-nav__link">
+        TeamsEmergencyCallingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsGuestCallingConfiguration/" class="md-nav__link">
+        TeamsGuestCallingConfiguration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsGuestMeetingConfiguration/" class="md-nav__link">
+        TeamsGuestMeetingConfiguration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsGuestMessagingConfiguration/" class="md-nav__link">
+        TeamsGuestMessagingConfiguration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsMeetingBroadcastConfiguration/" class="md-nav__link">
+        TeamsMeetingBroadcastConfiguration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsMeetingBroadcastPolicy/" class="md-nav__link">
+        TeamsMeetingBroadcastPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsMeetingConfiguration/" class="md-nav__link">
+        TeamsMeetingConfiguration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsMeetingPolicy/" class="md-nav__link">
+        TeamsMeetingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsMessagingPolicy/" class="md-nav__link">
+        TeamsMessagingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsPstnUsage/" class="md-nav__link">
+        TeamsPstnUsage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsTeam/" class="md-nav__link">
+        TeamsTeam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsTenantDialPlan/" class="md-nav__link">
+        TeamsTenantDialPlan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsUpgradeConfiguration/" class="md-nav__link">
+        TeamsUpgradeConfiguration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsUpgradePolicy/" class="md-nav__link">
+        TeamsUpgradePolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsUser/" class="md-nav__link">
+        TeamsUser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsVoiceRoute/" class="md-nav__link">
+        TeamsVoiceRoute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teams/TeamsVoiceRoutingPolicy/" class="md-nav__link">
+        TeamsVoiceRoutingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/why/" class="md-nav__link">
+        Why Microsoft365DSC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/microsoft/Microsoft365DSC/blob/master/CHANGELOG.md" target="_blank" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/license/" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/community-resources/" class="md-nav__link">
+        Community Resources
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/microsoft/Microsoft365DSC/tree/Dev/docs/docs/resources/intune/IntuneDeviceConfigurationPolicyWindows10.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="intunedeviceconfigurationpolicywindows10">IntuneDeviceConfigurationPolicyWindows10<a class="headerlink" href="#intunedeviceconfigurationpolicywindows10" title="Permanent link">&para;</a></h1>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Attribute</th>
+<th>DataType</th>
+<th>Description</th>
+<th>Allowed Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DisplayName</strong></td>
+<td>Key</td>
+<td>String</td>
+<td>Description of the device configuration policy for Windows 10.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Description</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Display name of the device configuration policy for Windows 10.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EnterpriseCloudPrintDiscoveryEndPoint</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Endpoint for discovering cloud printers.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EnterpriseCloudPrintOAuthAuthority</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Authentication endpoint for acquiring OAuth tokens.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EnterpriseCloudPrintOAuthClientIdentifier</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>GUID of a client application authorized to retrieve OAuth tokens from the OAuth Authority.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EnterpriseCloudPrintResourceIdentifier</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>OAuth resource URI for print service as configured in the Azure portal.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EnterpriseCloudPrintDiscoveryMaxLimit</strong></td>
+<td>Write</td>
+<td>UInt64</td>
+<td>Maximum number of printers that should be queried from a discovery endpoint. This is a mobile only setting. Valid values 1 to 65535</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EnterpriseCloudPrintMopriaDiscoveryResourceIdentifier</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>OAuth resource URI for printer discovery service as configured in Azure portal.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SearchBlockDiacritics</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Specifies if search can use diacritics.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SearchDisableAutoLanguageDetection</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Specifies whether to use automatic language detection when indexing content and properties.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SearchDisableIndexingEncryptedItems</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block indexing of WIP-protected items to prevent them from appearing in search results for Cortana or Explorer.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SearchEnableRemoteQueries</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block remote queries of this computer's index.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SearchDisableIndexerBackoff</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to disable the search indexer backoff feature.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SearchDisableIndexingRemovableDrive</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to allow users to add locations on removable drives to libraries and to be indexed.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SearchEnableAutomaticIndexSizeManangement</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Specifies minimum amount of hard drive space on the same drive as the index location before indexing stops.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DiagnosticsDataSubmissionMode</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson. Possible values are: userDefined, none, basic, enhanced, full.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>OneDriveDisableFileSync</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Gets or sets a value allowing IT admins to prevent apps and features from working with files on OneDrive.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SmartScreenEnableAppInstallControl</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>This property will be deprecated in July 2019 and will be replaced by property SmartScreenAppInstallControl. Allows IT Admins to control whether users are allowed to install apps from places other than the Store.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PersonalizationDesktopImageUrl</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>A http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url to a local image on the file system that needs to used as the Desktop Image.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PersonalizationLockScreenImageUrl</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Lock Screen Image or a file Url to a local image on the file system that needs to be used as the Lock Screen Image.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>BluetoothAllowedServices</strong></td>
+<td>Write</td>
+<td>StringArray[]</td>
+<td>Specify a list of allowed Bluetooth services and profiles in hex formatted strings.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>BluetoothBlockAdvertising</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Whether or not to Block the user from using bluetooth advertising.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>BluetoothBlockDiscoverableMode</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Whether or not to Block the user from using bluetooth discoverable mode.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>BluetoothBlockPrePairing</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Whether or not to block specific bundled Bluetooth peripherals to automatically pair with the host device.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlockAutofill</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block auto fill.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from using the Edge browser.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeCookiePolicy</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlockDeveloperTools</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block developer tools in the Edge browser.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlockSendingDoNotTrackHeader</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from sending the do not track header.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlockExtensions</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block extensions in the Edge browser.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlockInPrivateBrowsing</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlockJavaScript</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from using JavaScript.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlockPasswordManager</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block password manager.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlockAddressBarDropdown</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Block the address bar dropdown functionality in Microsoft Edge. Disable this settings to minimize network connections from Microsoft Edge to Microsoft services.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlockCompatibilityList</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Block Microsoft compatibility list in Microsoft Edge. This list from Microsoft helps Edge properly display sites with known compatibility issues.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeClearBrowsingDataOnExit</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Clear browsing data on exiting Microsoft Edge.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeAllowStartPagesModification</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeDisableFirstRunPage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Block the Microsoft web page that opens on the first use of Microsoft Edge. This policy allows enterprises, like those enrolled in zero emissions configurations, to block this page.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlockLiveTileDataCollection</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Block the collection of information by Microsoft for live tile creation when users pin a site to Start from Microsoft Edge.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeSyncFavoritesWithInternetExplorer</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Enable favorites sync between Internet Explorer and Microsoft Edge. Additions, deletions, modifications and order changes to favorites are shared between browsers.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>CellularBlockDataWhenRoaming</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Whether or not to Block the user from using data over cellular while roaming.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>CellularBlockVpn</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Whether or not to Block the user from using VPN over cellular.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>CellularBlockVpnWhenRoaming</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Whether or not to Block the user from using VPN when roaming over cellular.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderRequireRealTimeMonitoring</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to require real time monitoring.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderRequireBehaviorMonitoring</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to require behavior monitoring.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderRequireNetworkInspectionSystem</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to require network inspection system.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderScanDownloads</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to scan downloads.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderScanScriptsLoadedInInternetExplorer</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to scan scripts loaded in Internet Explorer browser.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderBlockEndUserAccess</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Whether or not to block end user access to Defender.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderSignatureUpdateIntervalInHours</strong></td>
+<td>Write</td>
+<td>UInt64</td>
+<td>The signature update interval in hours. Specify 0 not to check. Valid values 0 to 24</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderMonitorFileActivity</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderDaysBeforeDeletingQuarantinedMalware</strong></td>
+<td>Write</td>
+<td>UInt64</td>
+<td>Number of days before deleting quarantined malware. Valid values 0 to 90</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderScanMaxCpu</strong></td>
+<td>Write</td>
+<td>UInt64</td>
+<td>Max CPU usage percentage during scan. Valid values 0 to 100</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderScanArchiveFiles</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to scan archive files.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderScanIncomingMail</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to scan incoming mail messages.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderScanRemovableDrivesDuringFullScan</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to scan removable drives during full scan.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderScanMappedNetworkDrivesDuringFullScan</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to scan mapped network drives during full scan.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderScanNetworkFiles</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to scan files opened from a network folder.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderRequireCloudProtection</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to require cloud protection.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderCloudBlockLevel</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Specifies the level of cloud-delivered protection. Possible values are: notConfigured, high, highPlus, zeroTolerance.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderPromptForSampleSubmission</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt, promptBeforeSendingPersonalData, neverSendData, sendAllDataWithoutPrompting.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderScheduledQuickScanTime</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>The time to perform a daily quick scan.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderScanType</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>The defender system scan type. Possible values are: userDefined, disabled, quick, full.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderSystemScanSchedule</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderScheduledScanTime</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>The defender time for the system scan.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderDetectedMalwareActions</strong></td>
+<td>Write</td>
+<td>StringArray[]</td>
+<td>Gets or sets Defenders actions to take on detected Malware per threat level.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderFileExtensionsToExclude</strong></td>
+<td>Write</td>
+<td>StringArray[]</td>
+<td>File extensions to exclude from scans and real time protection.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderFilesAndFoldersToExclude</strong></td>
+<td>Write</td>
+<td>StringArray[]</td>
+<td>Files and folder to exclude from scans and real time protection.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DefenderProcessesToExclude</strong></td>
+<td>Write</td>
+<td>StringArray[]</td>
+<td>Processes to exclude from scans and real time protection.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>LockScreenAllowTimeoutConfiguration</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Specify whether to show a user-configurable setting to control the screen timeout while on the lock screen of Windows 10 Mobile devices. If this policy is set to Allow, the value set by lockScreenTimeoutInSeconds is ignored.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>LockScreenBlockActionCenterNotifications</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block action center notifications over lock screen.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>LockScreenBlockCortana</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not the user can interact with Cortana using speech while the system is locked.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>LockScreenBlockToastNotifications</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether to allow toast notifications above the device lock screen.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>LockScreenTimeoutInSeconds</strong></td>
+<td>Write</td>
+<td>UInt64</td>
+<td>Set the duration (in seconds) from the screen locking to the screen turning off for Windows 10 Mobile devices. Supported values are 11-1800. Valid values 11 to 1800</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PasswordBlockSimple</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Specify whether PINs or passwords such as '1111' or '1234' are allowed. For Windows 10 desktops, it also controls the use of picture passwords.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PasswordExpirationDays</strong></td>
+<td>Write</td>
+<td>UInt64</td>
+<td>The password expiration in days. Valid values 0 to 730</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PasswordMinimumLength</strong></td>
+<td>Write</td>
+<td>UInt64</td>
+<td>The minimum password length. Valid values 4 to 16</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PasswordMinutesOfInactivityBeforeScreenTimeout</strong></td>
+<td>Write</td>
+<td>UInt64</td>
+<td>The minutes of inactivity before the screen times out.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PasswordMinimumCharacterSetCount</strong></td>
+<td>Write</td>
+<td>UInt64</td>
+<td>The number of character sets required in the password.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PasswordPreviousPasswordBlockCount</strong></td>
+<td>Write</td>
+<td>UInt64</td>
+<td>The number of previous passwords to prevent reuse of. Valid values 0 to 50</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PasswordRequired</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to require the user to have a password.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PasswordRequireWhenResumeFromIdleState</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to require a password upon resuming from an idle state.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PasswordRequiredType</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>The required password type. Possible values are: deviceDefault, alphanumeric, numeric.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PasswordSignInFailureCountBeforeFactoryReset</strong></td>
+<td>Write</td>
+<td>UInt64</td>
+<td>The number of sign in failures before factory reset. Valid values 0 to 999</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PrivacyAdvertisingId</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Enables or disables the use of advertising ID. Added in Windows 10, version 1607. Possible values are: notConfigured, blocked, allowed.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PrivacyAutoAcceptPairingAndConsentPrompts</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to allow the automatic acceptance of the pairing and privacy user consent dialog when launching apps.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>PrivacyBlockInputPersonalization</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block the usage of cloud based speech services for Cortana, Dictation, or Store applications.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartBlockUnpinningAppsFromTaskbar</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block the user from unpinning apps from taskbar.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuAppListVisibility</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Setting the value of this collapses the app list, removes the app list entirely, or disables the corresponding toggle in the Settings app. Possible values are: userDefined, collapse, remove, disableSettingsApp.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuHideChangeAccountSettings</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Enabling this policy hides the change account setting from appearing in the user tile in the start menu.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuHideFrequentlyUsedApps</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Enabling this policy hides the most used apps from appearing on the start menu and disables the corresponding toggle in the Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuHideHibernate</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Enabling this policy hides hibernate from appearing in the power button in the start menu.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuHideLock</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Enabling this policy hides lock from appearing in the user tile in the start menu.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuHidePowerButton</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Enabling this policy hides the power button from appearing in the start menu.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuHideRecentJumpLists</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Enabling this policy hides recent jump lists from appearing on the start menu/taskbar and disables the corresponding toggle in the Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuHideRecentlyAddedApps</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Enabling this policy hides recently added apps from appearing on the start menu and disables the corresponding toggle in the Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuHideRestartOptions</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Enabling this policy hides 'Restart/Update and Restart' from appearing in the power button in the start menu.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuHideShutDown</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Enabling this policy hides shut down/update and shut down from appearing in the power button in the start menu.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuHideSignOut</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Enabling this policy hides sign out from appearing in the user tile in the start menu.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuHideSleep</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Enabling this policy hides sleep from appearing in the power button in the start menu.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuHideSwitchAccount</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Enabling this policy hides switch account from appearing in the user tile in the start menu.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuHideUserTile</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Enabling this policy hides the user tile from appearing in the start menu.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuLayoutEdgeAssetsXml</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuLayoutXml</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Allows admins to override the default Start menu layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in a UTF8 encoded byte array format.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuMode</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Allows admins to decide how the Start menu is displayed. Possible values are: userDefined, fullScreen, nonFullScreen.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuPinnedFolderDocuments</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Enforces the visibility (Show/Hide) of the Documents folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuPinnedFolderDownloads</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Enforces the visibility (Show/Hide) of the Downloads folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuPinnedFolderFileExplorer</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Enforces the visibility (Show/Hide) of the FileExplorer shortcut on the Start menu. Possible values are: notConfigured, hide, show.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuPinnedFolderHomeGroup</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Enforces the visibility (Show/Hide) of the HomeGroup folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuPinnedFolderMusic</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Enforces the visibility (Show/Hide) of the Music folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuPinnedFolderNetwork</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Enforces the visibility (Show/Hide) of the Network folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuPinnedFolderPersonalFolder</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Enforces the visibility (Show/Hide) of the PersonalFolder shortcut on the Start menu. Possible values are: notConfigured, hide, show.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuPinnedFolderPictures</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Enforces the visibility (Show/Hide) of the Pictures folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuPinnedFolderSettings</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Enforces the visibility (Show/Hide) of the Settings folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StartMenuPinnedFolderVideos</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Enforces the visibility (Show/Hide) of the Videos folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockSettingsApp</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block access to Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockSystemPage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block access to System in Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockDevicesPage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block access to Devices in Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockNetworkInternetPage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block access to Network &amp; Internet in Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockPersonalizationPage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block access to Personalization in Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockAccountsPage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block access to Accounts in Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockTimeLanguagePage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block access to Time &amp; Language in Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockEaseOfAccessPage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block access to Ease of Access in Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockPrivacyPage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block access to Privacy in Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockUpdateSecurityPage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block access to Update &amp; Security in Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockAppsPage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block access to Apps in Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockGamingPage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block access to Gaming in Settings app.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WindowsSpotlightBlockConsumerSpecificFeatures</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Allows IT admins to block experiences that are typically for consumers only, such as Start suggestions, Membership notifications, Post-OOBE app install and redirect tiles.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WindowsSpotlightBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Allows IT admins to turn off all Windows Spotlight features</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WindowsSpotlightBlockOnActionCenter</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Block suggestions from Microsoft that show after each OS clean install, upgrade or in an on-going basis to introduce users to what is new or changed</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WindowsSpotlightBlockTailoredExperiences</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Block personalized content in Windows spotlight based on users device usage.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WindowsSpotlightBlockThirdPartyNotifications</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Block third party content delivered via Windows Spotlight</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WindowsSpotlightBlockWelcomeExperience</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Block Windows Spotlight Windows welcome experience</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WindowsSpotlightBlockWindowsTips</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Allows IT admins to turn off the popup of Windows Tips.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WindowsSpotlightConfigureOnLockScreen</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Specifies the type of Spotlight. Possible values are: notConfigured, disabled, enabled.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>NetworkProxyApplySettingsDeviceWide</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account thats enrolled into MDM.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>NetworkProxyDisableAutoDetect</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Disable automatic detection of settings. If enabled, the system will try to find the path to a proxy auto-config (PAC) script.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>NetworkProxyAutomaticConfigurationUrl</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Address to the proxy auto-config (PAC) script you want to use.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>NetworkProxyServer</strong></td>
+<td>Write</td>
+<td>StringArray[]</td>
+<td>Specifies manual proxy server settings.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>AccountsBlockAddingNonMicrosoftAccountEmail</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>AntiTheftModeBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block the user from selecting an AntiTheft mode preference (Windows 10 Mobile only).</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>BluetoothBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Whether or not to Block the user from using bluetooth.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>CameraBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Whether or not to Block the user from accessing the camera of the device.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ConnectedDevicesServiceBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Whether or not to block Connected Devices Service which enables discovery and connection to other devices, remote messaging, remote app sessions and other cross-device experiences.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>CertificatesBlockManualRootCertificateInstallation</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Whether or not to Block the user from doing manual root certificate installation.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>CopyPasteBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Whether or not to Block the user from using copy paste.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>CortanaBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Whether or not to Block the user from using Cortana.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DeviceManagementBlockFactoryResetOnMobile</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from resetting their phone.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DeviceManagementBlockManualUnenroll</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from doing manual un-enrollment from device management.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SafeSearchFilter</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Specifies what filter level of safe search is required. Possible values are: userDefined, strict, moderate.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlockPopups</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block popups.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlockSearchSuggestions</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block the user from using the search suggestions in the address bar.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlockSendingIntranetTrafficToInternetExplorer</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer. Note: the name of this property is misleading; the property is obsolete, use EdgeSendIntranetTrafficToInternetExplorer instead.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeSendIntranetTrafficToInternetExplorer</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeRequireSmartScreen</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Require the user to use the smart screen filter.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeEnterpriseModeSiteListLocation</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates the enterprise mode site list location. Could be a local file, local network or http location.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeFirstRunUrl</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>The first run URL for when Edge browser is opened for the first time.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeSearchEngine</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Allows IT admins to set a default search engine for MDM-Controlled devices. Users can override this and change their default search engine provided the AllowSearchEngineCustomization policy is not set.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeHomepageUrls</strong></td>
+<td>Write</td>
+<td>StringArray[]</td>
+<td>The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EdgeBlockAccessToAboutFlags</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to prevent access to about flags on Edge browser.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SmartScreenBlockPromptOverride</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not users can override SmartScreen Filter warnings about potentially malicious websites.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SmartScreenBlockPromptOverrideForFiles</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not users can override the SmartScreen Filter warnings about downloading unverified files</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WebRtcBlockLocalhostIpAddress</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not user's localhost IP address is displayed while making phone calls using the WebRTC</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>InternetSharingBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from using internet sharing.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockAddProvisioningPackage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block the user from installing provisioning packages.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockRemoveProvisioningPackage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block the runtime configuration agent from removing provisioning packages.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockChangeSystemTime</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block the user from changing date and time settings.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockEditDeviceName</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block the user from editing the device name.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockChangeRegion</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block the user from changing the region settings.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockChangeLanguage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block the user from changing the language settings.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SettingsBlockChangePowerSleep</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block the user from changing power and sleep settings.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>LocationServicesBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from location services.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>MicrosoftAccountBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block a Microsoft account.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>MicrosoftAccountBlockSettingsSync</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block Microsoft account settings sync.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>NfcBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from using near field communication.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ResetProtectionModeBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from reset protection mode.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ScreenCaptureBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from taking Screenshots.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StorageBlockRemovableStorage</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from using removable storage.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StorageRequireMobileDeviceEncryption</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicating whether or not to require encryption on a mobile device.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>UsbBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from USB connection.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>VoiceRecordingBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from voice recording.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WiFiBlockAutomaticConnectHotspots</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicating whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WiFiBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from using Wi-Fi.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WiFiBlockManualConfiguration</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from using Wi-Fi manual configuration.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WiFiScanInterval</strong></td>
+<td>Write</td>
+<td>UInt64</td>
+<td>Specify how often devices scan for Wi-Fi networks. Supported values are 1-500, where 100 = default, and 500 = low frequency. Valid values 1 to 500</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WirelessDisplayBlockProjectionToThisDevice</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to allow other devices from discovering this PC for projection.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WirelessDisplayBlockUserInputFromReceiver</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to allow user input from wireless display receiver.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WirelessDisplayRequirePinForPairing</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to require a PIN for new devices to initiate pairing.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WindowsStoreBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to Block the user from using the Windows store.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>AppsAllowTrustedAppsSideloading</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded. Possible values are: notConfigured, blocked, allowed.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WindowsStoreBlockAutoUpdate</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block automatic update of apps from Windows Store.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DeveloperUnlockSetting</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Indicates whether or not to allow developer unlock. Possible values are: notConfigured, blocked, allowed.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SharedUserAppDataAllowed</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block multiple users of the same app to share data.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>AppsBlockWindowsStoreOriginatedApps</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to disable the launch of all apps from Windows Store that came pre-installed or were downloaded.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>WindowsStoreEnablePrivateStoreOnly</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to enable Private Store Only.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StorageRestrictAppDataToSystemVolume</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether application data is restricted to the system drive.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>StorageRestrictAppInstallToSystemVolume</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether the installation of applications is restricted to the system drive.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>GameDvrBlocked</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to block DVR and broadcasting.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ExperienceBlockDeviceDiscovery</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to enable device discovery UX.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ExperienceBlockErrorDialogWhenNoSIM</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>NIndicates whether or not to allow the error dialog from displaying if no SIM card is detected.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ExperienceBlockTaskSwitcher</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Indicates whether or not to enable task switching on the device.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>LogonBlockFastUserSwitching</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Disables the ability to quickly switch between users that are logged on simultaneously without logging off.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>TenantLockdownRequireNetworkDuringOutOfBoxExperience</strong></td>
+<td>Write</td>
+<td>Boolean</td>
+<td>Whether the device is required to connect to the network.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Ensure</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Present ensures the site collection exists, absent ensures it is removed</td>
+<td>Present, Absent</td>
+</tr>
+<tr>
+<td><strong>Credential</strong></td>
+<td>Write</td>
+<td>PSCredential</td>
+<td>Credentials of the Intune Admin</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ApplicationId</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Id of the Azure Active Directory application to authenticate with.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>TenantId</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Name of the Azure Active Directory tenant used for authentication. Format contoso.onmicrosoft.com</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>ApplicationSecret</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Secret of the Azure Active Directory tenant used for authentication.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>CertificateThumbprint</strong></td>
+<td>Write</td>
+<td>String</td>
+<td>Thumbprint of the Azure Active Directory application's authentication certificate to use for authentication.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="intunedeviceconfigurationpolicywindows10_1">IntuneDeviceConfigurationPolicyWindows10<a class="headerlink" href="#intunedeviceconfigurationpolicywindows10_1" title="Permanent link">&para;</a></h1>
+<p>This resource configures an Intune device configuration profile for an Windows 10 Device.</p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="example-1">Example 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h3>
+<p>This example creates a new General Device Configuration Policy for Windows .</p>
+<div class="highlight"><pre><span></span><code><span class="n">Configuration</span> <span class="n">Example</span>
+<span class="p">{</span>
+    <span class="k">param</span><span class="p">(</span>
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$true</span><span class="p">)]</span>
+        <span class="no">[PSCredential]</span>
+        <span class="nv">$credsGlobalAdmin</span>
+    <span class="p">)</span>
+    <span class="nb">Import-DscResource</span> <span class="n">-ModuleName</span> <span class="n">Microsoft365DSC</span>
+
+    <span class="n">node</span> <span class="n">localhost</span>
+    <span class="p">{</span>
+        <span class="n">IntuneDeviceConfigurationPolicyWindows10</span> <span class="s1">&#39;ConfigureDeviceConfigurationPolicyWindows10&#39;</span>
+        <span class="p">{</span>
+            <span class="n">displayName</span>                                           <span class="p">=</span> <span class="s2">&quot;CONTOSO | W10 | Device Restriction&quot;</span>
+            <span class="n">description</span>                                           <span class="p">=</span> <span class="s2">&quot;Default device restriction settings&quot;</span>
+            <span class="n">defenderBlockEndUserAccess</span>                            <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">defenderRequireRealTimeMonitoring</span>                     <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">defenderRequireBehaviorMonitoring</span>                     <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">defenderRequireNetworkInspectionSystem</span>                <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">defenderScanDownloads</span>                                 <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">defenderScanScriptsLoadedInInternetExplorer</span>           <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">defenderSignatureUpdateIntervalInHours</span>                <span class="p">=</span> <span class="n">8</span>
+            <span class="n">defenderMonitorFileActivity</span>                           <span class="p">=</span> <span class="s1">&#39;monitorIncomingFilesOnly&#39;</span>  <span class="c"># userDefined,monitorAllFiles,monitorIncomingFilesOnly,monitorOutgoingFilesOnly</span>
+            <span class="n">defenderDaysBeforeDeletingQuarantinedMalware</span>          <span class="p">=</span> <span class="n">3</span>
+            <span class="n">defenderScanMaxCpu</span>                                    <span class="p">=</span> <span class="n">2</span>
+            <span class="n">defenderScanArchiveFiles</span>                              <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">defenderScanIncomingMail</span>                              <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">defenderScanRemovableDrivesDuringFullScan</span>             <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">defenderScanMappedNetworkDrivesDuringFullScan</span>         <span class="p">=</span> <span class="nv">$false</span>
+            <span class="n">defenderScanNetworkFiles</span>                              <span class="p">=</span> <span class="nv">$false</span>
+            <span class="n">defenderRequireCloudProtection</span>                        <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">defenderCloudBlockLevel</span>                               <span class="p">=</span> <span class="s1">&#39;high&#39;</span>
+            <span class="n">defenderPromptForSampleSubmission</span>                     <span class="p">=</span> <span class="s1">&#39;alwaysPrompt&#39;</span>
+            <span class="n">defenderScheduledQuickScanTime</span>                        <span class="p">=</span> <span class="s1">&#39;13:00:00.0000000&#39;</span>
+            <span class="n">defenderScanType</span>                                      <span class="p">=</span> <span class="s1">&#39;quick&#39;</span>   <span class="c">#quick,full,userDefined</span>
+            <span class="n">defenderSystemScanSchedule</span>                            <span class="p">=</span> <span class="s1">&#39;monday&#39;</span>  <span class="c">#days of week</span>
+            <span class="n">defenderScheduledScanTime</span>                             <span class="p">=</span> <span class="s1">&#39;11:00:00.0000000&#39;</span>
+            <span class="n">defenderDetectedMalwareActions</span>                        <span class="p">=</span> <span class="p">@(</span><span class="s2">&quot;lowSeverity=clean&quot;</span><span class="p">,</span> <span class="s2">&quot;moderateSeverity=quarantine&quot;</span><span class="p">,</span> <span class="s2">&quot;highSeverity=remove&quot;</span><span class="p">,</span> <span class="s2">&quot;severeSeverity=block&quot;</span><span class="p">)</span>
+            <span class="n">defenderFileExtensionsToExclude</span>                       <span class="p">=</span> <span class="s2">&quot;[</span><span class="se">`&quot;</span><span class="s2">csv,jpg,docx</span><span class="se">`&quot;</span><span class="s2">]&quot;</span>
+            <span class="n">defenderFilesAndFoldersToExclude</span>                      <span class="p">=</span> <span class="s2">&quot;[</span><span class="se">`&quot;</span><span class="s2">c:\\2,C:\\1</span><span class="se">`&quot;</span><span class="s2">]&quot;</span>
+            <span class="n">defenderProcessesToExclude</span>                            <span class="p">=</span> <span class="s2">&quot;[</span><span class="se">`&quot;</span><span class="s2">notepad.exe,c:\\Windows\\myprocess.exe</span><span class="se">`&quot;</span><span class="s2">]&quot;</span>
+            <span class="n">lockScreenAllowTimeoutConfiguration</span>                   <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">lockScreenBlockActionCenterNotifications</span>              <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">lockScreenBlockCortana</span>                                <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">lockScreenBlockToastNotifications</span>                     <span class="p">=</span> <span class="nv">$false</span>
+            <span class="n">lockScreenTimeoutInSeconds</span>                            <span class="p">=</span> <span class="n">90</span>
+            <span class="n">passwordBlockSimple</span>                                   <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">passwordExpirationDays</span>                                <span class="p">=</span> <span class="n">6</span>
+            <span class="n">passwordMinimumLength</span>                                 <span class="p">=</span> <span class="n">5</span>
+            <span class="n">passwordMinutesOfInactivityBeforeScreenTimeout</span>        <span class="p">=</span> <span class="n">15</span>
+            <span class="n">passwordMinimumCharacterSetCount</span>                      <span class="p">=</span> <span class="n">1</span>
+            <span class="n">passwordPreviousPasswordBlockCount</span>                    <span class="p">=</span> <span class="n">2</span>
+            <span class="n">passwordRequired</span>                                      <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">passwordRequireWhenResumeFromIdleState</span>                <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">passwordRequiredType</span>                                  <span class="p">=</span> <span class="s2">&quot;alphanumeric&quot;</span>
+            <span class="n">passwordSignInFailureCountBeforeFactoryReset</span>          <span class="p">=</span> <span class="n">12</span>
+            <span class="n">privacyAdvertisingId</span>                                  <span class="p">=</span> <span class="s2">&quot;blocked&quot;</span>
+            <span class="n">privacyAutoAcceptPairingAndConsentPrompts</span>             <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">privacyBlockInputPersonalization</span>                      <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startBlockUnpinningAppsFromTaskbar</span>                    <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startMenuAppListVisibility</span>                            <span class="p">=</span> <span class="s2">&quot;collapse&quot;</span>
+            <span class="n">startMenuHideChangeAccountSettings</span>                    <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startMenuHideFrequentlyUsedApps</span>                       <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startMenuHideHibernate</span>                                <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startMenuHideLock</span>                                     <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startMenuHidePowerButton</span>                              <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startMenuHideRecentJumpLists</span>                          <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startMenuHideRecentlyAddedApps</span>                        <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startMenuHideRestartOptions</span>                           <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startMenuHideShutDown</span>                                 <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startMenuHideSignOut</span>                                  <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startMenuHideSleep</span>                                    <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startMenuHideSwitchAccount</span>                            <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startMenuHideUserTile</span>                                 <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">startMenuLayoutXml</span>                                    <span class="p">=</span> <span class="s2">&quot;+DQogICAGlmaWNhdGlvblRlbXBsYXRlPg==&quot;</span>
+            <span class="n">startMenuMode</span>                                         <span class="p">=</span> <span class="s2">&quot;fullScreen&quot;</span>
+            <span class="n">startMenuPinnedFolderDocuments</span>                        <span class="p">=</span> <span class="s2">&quot;hide&quot;</span>
+            <span class="n">startMenuPinnedFolderDownloads</span>                        <span class="p">=</span> <span class="s2">&quot;hide&quot;</span>
+            <span class="n">startMenuPinnedFolderFileExplorer</span>                     <span class="p">=</span> <span class="s2">&quot;hide&quot;</span>
+            <span class="n">startMenuPinnedFolderHomeGroup</span>                        <span class="p">=</span> <span class="s2">&quot;hide&quot;</span>
+            <span class="n">startMenuPinnedFolderMusic</span>                            <span class="p">=</span> <span class="s2">&quot;hide&quot;</span>
+            <span class="n">startMenuPinnedFolderNetwork</span>                          <span class="p">=</span> <span class="s2">&quot;hide&quot;</span>
+            <span class="n">startMenuPinnedFolderPersonalFolder</span>                   <span class="p">=</span> <span class="s2">&quot;hide&quot;</span>
+            <span class="n">startMenuPinnedFolderPictures</span>                         <span class="p">=</span> <span class="s2">&quot;hide&quot;</span>
+            <span class="n">startMenuPinnedFolderSettings</span>                         <span class="p">=</span> <span class="s2">&quot;hide&quot;</span>
+            <span class="n">startMenuPinnedFolderVideos</span>                           <span class="p">=</span> <span class="s2">&quot;hide&quot;</span>
+            <span class="n">settingsBlockSettingsApp</span>                              <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockSystemPage</span>                               <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockDevicesPage</span>                              <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockNetworkInternetPage</span>                      <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockPersonalizationPage</span>                      <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockAccountsPage</span>                             <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockTimeLanguagePage</span>                         <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockEaseOfAccessPage</span>                         <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockPrivacyPage</span>                              <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockUpdateSecurityPage</span>                       <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockAppsPage</span>                                 <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockGamingPage</span>                               <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">windowsSpotlightBlockConsumerSpecificFeatures</span>         <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">windowsSpotlightBlocked</span>                               <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">windowsSpotlightBlockOnActionCenter</span>                   <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">windowsSpotlightBlockTailoredExperiences</span>              <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">windowsSpotlightBlockThirdPartyNotifications</span>          <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">windowsSpotlightBlockWelcomeExperience</span>                <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">windowsSpotlightBlockWindowsTips</span>                      <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">windowsSpotlightConfigureOnLockScreen</span>                 <span class="p">=</span> <span class="s2">&quot;disabled&quot;</span>
+            <span class="n">networkProxyApplySettingsDeviceWide</span>                   <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">networkProxyDisableAutoDetect</span>                         <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">networkProxyAutomaticConfigurationUrl</span>                 <span class="p">=</span> <span class="s2">&quot;https://example.com/networkProxyAutomaticConfigurationUrl/&quot;</span>
+            <span class="n">accountsBlockAddingNonMicrosoftAccountEmail</span>           <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">antiTheftModeBlocked</span>                                  <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">bluetoothBlocked</span>                                      <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">bluetoothAllowedServices</span>                              <span class="p">=</span> <span class="s2">&quot;[</span><span class="se">`&quot;</span><span class="s2">8e473eaa-ead4-4c60-ba9c-2c5696d71492</span><span class="se">`&quot;</span><span class="s2">,</span><span class="se">`&quot;</span><span class="s2">21913f2d-a803-4f36-8039-669fd94ce5b3</span><span class="se">`&quot;</span><span class="s2">]&quot;</span>
+            <span class="n">bluetoothBlockAdvertising</span>                             <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">bluetoothBlockDiscoverableMode</span>                        <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">bluetoothBlockPrePairing</span>                              <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">cameraBlocked</span>                                         <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">connectedDevicesServiceBlocked</span>                        <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">certificatesBlockManualRootCertificateInstallation</span>    <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">copyPasteBlocked</span>                                      <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">cortanaBlocked</span>                                        <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">deviceManagementBlockFactoryResetOnMobile</span>             <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">deviceManagementBlockManualUnenroll</span>                   <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">safeSearchFilter</span>                                      <span class="p">=</span> <span class="s2">&quot;strict&quot;</span>
+            <span class="n">edgeBlockPopups</span>                                       <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">edgeBlockSearchSuggestions</span>                            <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">edgeBlockSendingIntranetTrafficToInternetExplorer</span>     <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">edgeSendIntranetTrafficToInternetExplorer</span>             <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">edgeRequireSmartScreen</span>                                <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">edgeFirstRunUrl</span>                                       <span class="p">=</span> <span class="s2">&quot;https://contoso.com/&quot;</span>
+            <span class="n">edgeBlockAccessToAboutFlags</span>                           <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">edgeHomepageUrls</span>                                      <span class="p">=</span> <span class="s2">&quot;[</span><span class="se">`&quot;</span><span class="s2">https://microsoft.com</span><span class="se">`&quot;</span><span class="s2">]&quot;</span>
+            <span class="n">smartScreenBlockPromptOverride</span>                        <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">smartScreenBlockPromptOverrideForFiles</span>                <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">webRtcBlockLocalhostIpAddress</span>                         <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">internetSharingBlocked</span>                                <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockAddProvisioningPackage</span>                   <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockRemoveProvisioningPackage</span>                <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockChangeSystemTime</span>                         <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockEditDeviceName</span>                           <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockChangeRegion</span>                             <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockChangeLanguage</span>                           <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">settingsBlockChangePowerSleep</span>                         <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">locationServicesBlocked</span>                               <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">microsoftAccountBlocked</span>                               <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">microsoftAccountBlockSettingsSync</span>                     <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">nfcBlocked</span>                                            <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">resetProtectionModeBlocked</span>                            <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">screenCaptureBlocked</span>                                  <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">storageBlockRemovableStorage</span>                          <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">storageRequireMobileDeviceEncryption</span>                  <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">usbBlocked</span>                                            <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">voiceRecordingBlocked</span>                                 <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">wiFiBlockAutomaticConnectHotspots</span>                     <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">wiFiBlocked</span>                                           <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">wiFiBlockManualConfiguration</span>                          <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">wiFiScanInterval</span>                                      <span class="p">=</span> <span class="n">1</span>
+            <span class="n">wirelessDisplayBlockProjectionToThisDevice</span>            <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">wirelessDisplayBlockUserInputFromReceiver</span>             <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">wirelessDisplayRequirePinForPairing</span>                   <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">windowsStoreBlocked</span>                                   <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">appsAllowTrustedAppsSideloading</span>                       <span class="p">=</span> <span class="s2">&quot;blocked&quot;</span>
+            <span class="n">windowsStoreBlockAutoUpdate</span>                           <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">developerUnlockSetting</span>                                <span class="p">=</span> <span class="s2">&quot;blocked&quot;</span>
+            <span class="n">sharedUserAppDataAllowed</span>                              <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">appsBlockWindowsStoreOriginatedApps</span>                   <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">windowsStoreEnablePrivateStoreOnly</span>                    <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">storageRestrictAppDataToSystemVolume</span>                  <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">storageRestrictAppInstallToSystemVolume</span>               <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">gameDvrBlocked</span>                                        <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">edgeSearchEngine</span>                                      <span class="p">=</span> <span class="s2">&quot;bing&quot;</span>
+            <span class="c">#edgeSearchEngine                                     = &quot;https://go.microsoft.com/fwlink/?linkid=842596&quot;  #&#39;Google&#39;</span>
+            <span class="n">experienceBlockDeviceDiscovery</span>                        <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">experienceBlockErrorDialogWhenNoSIM</span>                   <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">experienceBlockTaskSwitcher</span>                           <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">logonBlockFastUserSwitching</span>                           <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">tenantLockdownRequireNetworkDuringOutOfBoxExperience</span>  <span class="p">=</span> <span class="nv">$true</span>
+            <span class="n">enterpriseCloudPrintDiscoveryEndPoint</span>                 <span class="p">=</span> <span class="s2">&quot;https://cloudprinterdiscovery.contoso.com&quot;</span>
+            <span class="n">enterpriseCloudPrintDiscoveryMaxLimit</span>                 <span class="p">=</span> <span class="n">4</span>
+            <span class="n">enterpriseCloudPrintMopriaDiscoveryResourceIdentifier</span> <span class="p">=</span> <span class="s2">&quot;http://mopriadiscoveryservice/cloudprint&quot;</span>
+            <span class="n">enterpriseCloudPrintOAuthClientIdentifier</span>             <span class="p">=</span> <span class="s2">&quot;30fbf7e8-321c-40ce-8b9f-160b6b049257&quot;</span>
+            <span class="n">enterpriseCloudPrintOAuthAuthority</span>                    <span class="p">=</span> <span class="s2">&quot;https:/tenant.contoso.com/adfs&quot;</span>
+            <span class="n">enterpriseCloudPrintResourceIdentifier</span>                <span class="p">=</span> <span class="s2">&quot;http://cloudenterpriseprint/cloudPrint&quot;</span>
+            <span class="n">networkProxyServer</span>                                    <span class="p">=</span> <span class="p">@(</span><span class="s2">&quot;address=proxy.contoso.com:8080&quot;</span><span class="p">,</span> <span class="s2">&quot;exceptions=*.contoso.com</span><span class="se">`r`n</span><span class="s2">*.internal.local&quot;</span><span class="p">,</span> <span class="s2">&quot;useForLocalAddresses=false&quot;</span><span class="p">)</span>
+            <span class="n">Ensure</span>                                                <span class="p">=</span> <span class="s1">&#39;Present&#39;</span>
+            <span class="n">Credential</span>                                            <span class="p">=</span> <span class="nv">$credsGlobalAdmin</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../IntuneDeviceConfigurationPolicyAndroidWorkProfile/" class="md-footer__link md-footer__link--prev" aria-label="Previous: IntuneDeviceConfigurationPolicyAndroidWorkProfile" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              IntuneDeviceConfigurationPolicyAndroidWorkProfile
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../IntuneDeviceConfigurationPolicyiOS/" class="md-footer__link md-footer__link--next" aria-label="Next: IntuneDeviceConfigurationPolicyiOS" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              IntuneDeviceConfigurationPolicyiOS
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Microsoft365DSC
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/Microsoft365DSC" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/channel/UCveScabVT6pxzqYgGRu17iw" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.powershellgallery.com/packages/Microsoft365DSC/" target="_blank" rel="noopener" title="www.powershellgallery.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.instant", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.01de222e.min.js"></script>
+      
+    
+  </body>
+</html>

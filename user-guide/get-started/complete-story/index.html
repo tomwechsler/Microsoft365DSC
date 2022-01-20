@@ -1,0 +1,3575 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://microsoft.github.io/Microsoft365DSC/user-guide/get-started/complete-story/">
+      
+      <link rel="icon" href="../../../Images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.7">
+    
+    
+      
+        <title>Get Started - Microsoft365DSC - Your Cloud Configuration</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.cd566b2a.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-209929913-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prerequisites" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+  <!-- Add announcement here, including arbitrary HTML -->
+  <div class="md-container"><span>Check out our <a href="https://www.youtube.com/channel/UCveScabVT6pxzqYgGRu17iw" >YouTube channel</a></span></div>
+
+          </div>
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Microsoft365DSC - Your Cloud Configuration" class="md-header__button md-logo" aria-label="Microsoft365DSC - Your Cloud Configuration" data-md-component="logo">
+      
+  <img src="../../../Images/SmallLogo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Microsoft365DSC - Your Cloud Configuration
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Get Started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/microsoft/Microsoft365DSC/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        User Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../contributing/contribution-guidelines/" class="md-tabs__link">
+        Contributing
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../concepts/breaking-changes/" class="md-tabs__link">
+        Concepts
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../resources/overview/" class="md-tabs__link">
+        Resources
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/why/" class="md-tabs__link">
+        About
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Microsoft365DSC - Your Cloud Configuration" class="md-nav__button md-logo" aria-label="Microsoft365DSC - Your Cloud Configuration" data-md-component="logo">
+      
+  <img src="../../../Images/SmallLogo.png" alt="logo">
+
+    </a>
+    Microsoft365DSC - Your Cloud Configuration
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/microsoft/Microsoft365DSC/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/what-is-M365DSC/" class="md-nav__link">
+        What is Microsoft365DSC?
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Get Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Get Started
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-graph-permissions" class="md-nav__link">
+    Microsoft Graph Permissions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/create-blueprint/" class="md-nav__link">
+        Advanced
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Contributing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contributing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Contributing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/contribution-guidelines/" class="md-nav__link">
+        Guidelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/getting-started/" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/develop-new-resource/" class="md-nav__link">
+        Develop a New Resource
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Concepts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/breaking-changes/" class="md-nav__link">
+        Breaking Changes Policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/odsp-permissions/" class="md-nav__link">
+        OneDrive & SharePoint Permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../concepts/consent-flow/" class="md-nav__link">
+        Consent Flow
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Azure AD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Azure AD" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Azure AD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/azure-ad/AADApplication/" class="md-nav__link">
+        AADApplication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/azure-ad/AADConditionalAccessPolicy/" class="md-nav__link">
+        AADConditionalAccessPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/azure-ad/AADGroup/" class="md-nav__link">
+        AADGroup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/azure-ad/AADGroupLifecyclePolicy/" class="md-nav__link">
+        AADGroupLifecyclePolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/azure-ad/AADGroupsNamingPolicy/" class="md-nav__link">
+        AADGroupsNamingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/azure-ad/AADGroupsSettings/" class="md-nav__link">
+        AADGroupsSettings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/azure-ad/AADNamedLocationPolicy/" class="md-nav__link">
+        AADNamedLocationPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/azure-ad/AADRoleDefinition/" class="md-nav__link">
+        AADRoleDefinition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/azure-ad/AADServicePrincipal/" class="md-nav__link">
+        AADServicePrincipal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/azure-ad/AADTenantDetails/" class="md-nav__link">
+        AADTenantDetails
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/azure-ad/AADTokenLifetimePolicy/" class="md-nav__link">
+        AADTokenLifetimePolicy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          Exchange
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Exchange" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Exchange
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOAcceptedDomain/" class="md-nav__link">
+        EXOAcceptedDomain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOActiveSyncDeviceAccessRule/" class="md-nav__link">
+        EXOActiveSyncDeviceAccessRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOAddressBookPolicy/" class="md-nav__link">
+        EXOAddressBookPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOAddressList/" class="md-nav__link">
+        EXOAddressList
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOAntiPhishPolicy/" class="md-nav__link">
+        EXOAntiPhishPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOAntiPhishRule/" class="md-nav__link">
+        EXOAntiPhishRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOApplicationAccessPolicy/" class="md-nav__link">
+        EXOApplicationAccessPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOAtpPolicyForO365/" class="md-nav__link">
+        EXOAtpPolicyForO365
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOAvailabilityAddressSpace/" class="md-nav__link">
+        EXOAvailabilityAddressSpace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOAvailabilityConfig/" class="md-nav__link">
+        EXOAvailabilityConfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOCASMailboxPlan/" class="md-nav__link">
+        EXOCASMailboxPlan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOClientAccessRule/" class="md-nav__link">
+        EXOClientAccessRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXODkimSigningConfig/" class="md-nav__link">
+        EXODkimSigningConfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOEmailAddressPolicy/" class="md-nav__link">
+        EXOEmailAddressPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOGlobalAddressList/" class="md-nav__link">
+        EXOGlobalAddressList
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOHostedConnectionFilterPolicy/" class="md-nav__link">
+        EXOHostedConnectionFilterPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOHostedContentFilterPolicy/" class="md-nav__link">
+        EXOHostedContentFilterPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOHostedContentFilterRule/" class="md-nav__link">
+        EXOHostedContentFilterRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOHostedOutboundSpamFilterPolicy/" class="md-nav__link">
+        EXOHostedOutboundSpamFilterPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOHostedOutboundSpamFilterRule/" class="md-nav__link">
+        EXOHostedOutboundSpamFilterRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOInboundConnector/" class="md-nav__link">
+        EXOInboundConnector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOIntraOrganizationConnector/" class="md-nav__link">
+        EXOIntraOrganizationConnector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOJournalRule/" class="md-nav__link">
+        EXOJournalRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOMailTips/" class="md-nav__link">
+        EXOMailTips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOMailboxSettings/" class="md-nav__link">
+        EXOMailboxSettings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOMalwareFilterPolicy/" class="md-nav__link">
+        EXOMalwareFilterPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOMalwareFilterRule/" class="md-nav__link">
+        EXOMalwareFilterRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOManagementRole/" class="md-nav__link">
+        EXOManagementRole
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOMobileDeviceMailboxPolicy/" class="md-nav__link">
+        EXOMobileDeviceMailboxPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOOfflineAddressBook/" class="md-nav__link">
+        EXOOfflineAddressBook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOOnPremisesOrganization/" class="md-nav__link">
+        EXOOnPremisesOrganization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOOrganizationConfig/" class="md-nav__link">
+        EXOOrganizationConfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOOrganizationRelationship/" class="md-nav__link">
+        EXOOrganizationRelationship
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOOutboundConnector/" class="md-nav__link">
+        EXOOutboundConnector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOOwaMailboxPolicy/" class="md-nav__link">
+        EXOOwaMailboxPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOPartnerApplication/" class="md-nav__link">
+        EXOPartnerApplication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOPolicyTipConfig/" class="md-nav__link">
+        EXOPolicyTipConfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXORemoteDomain/" class="md-nav__link">
+        EXORemoteDomain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXORoleAssignmentPolicy/" class="md-nav__link">
+        EXORoleAssignmentPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOSafeAttachmentPolicy/" class="md-nav__link">
+        EXOSafeAttachmentPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOSafeAttachmentRule/" class="md-nav__link">
+        EXOSafeAttachmentRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOSafeLinksPolicy/" class="md-nav__link">
+        EXOSafeLinksPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOSafeLinksRule/" class="md-nav__link">
+        EXOSafeLinksRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOSharedMailbox/" class="md-nav__link">
+        EXOSharedMailbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOSharingPolicy/" class="md-nav__link">
+        EXOSharingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/exchange/EXOTransportRule/" class="md-nav__link">
+        EXOTransportRule
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Intune
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Intune" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Intune
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/intune/IntuneAppConfigurationPolicy/" class="md-nav__link">
+        IntuneAppConfigurationPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/intune/IntuneAppProtectionPolicyiOS/" class="md-nav__link">
+        IntuneAppProtectionPolicyiOS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/intune/IntuneDeviceCategory/" class="md-nav__link">
+        IntuneDeviceCategory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/intune/IntuneDeviceCompliancePolicyAndroid/" class="md-nav__link">
+        IntuneDeviceCompliancePolicyAndroid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/intune/IntuneDeviceCompliancePolicyAndroidDeviceOwner/" class="md-nav__link">
+        IntuneDeviceCompliancePolicyAndroidDeviceOwner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/intune/IntuneDeviceCompliancePolicyAndroidWorkProfile/" class="md-nav__link">
+        IntuneDeviceCompliancePolicyAndroidWorkProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/intune/IntuneDeviceCompliancePolicyMacOS/" class="md-nav__link">
+        IntuneDeviceCompliancePolicyMacOS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/intune/IntuneDeviceCompliancePolicyWindows10/" class="md-nav__link">
+        IntuneDeviceCompliancePolicyWindows10
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/intune/IntuneDeviceCompliancePolicyiOs/" class="md-nav__link">
+        IntuneDeviceCompliancePolicyiOs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/intune/IntuneDeviceConfigurationPolicyAndroidWorkProfile/" class="md-nav__link">
+        IntuneDeviceConfigurationPolicyAndroidWorkProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/intune/IntuneDeviceConfigurationPolicyWindows10/" class="md-nav__link">
+        IntuneDeviceConfigurationPolicyWindows10
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/intune/IntuneDeviceConfigurationPolicyiOS/" class="md-nav__link">
+        IntuneDeviceConfigurationPolicyiOS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/intune/IntuneDeviceEnrollmentLimitRestriction/" class="md-nav__link">
+        IntuneDeviceEnrollmentLimitRestriction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/intune/IntuneDeviceEnrollmentPlatformRestriction/" class="md-nav__link">
+        IntuneDeviceEnrollmentPlatformRestriction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          Office365
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Office365" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Office365
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/office365/O365AdminAuditLogConfig/" class="md-nav__link">
+        O365AdminAuditLogConfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/office365/O365Group/" class="md-nav__link">
+        O365Group
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/office365/O365OrgCustomizationSetting/" class="md-nav__link">
+        O365OrgCustomizationSetting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/office365/O365User/" class="md-nav__link">
+        O365User
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
+          OneDrive
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="OneDrive" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          OneDrive
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/onedrive/ODSettings/" class="md-nav__link">
+        ODSettings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7">
+          Planner
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Planner" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          Planner
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/planner/PlannerBucket/" class="md-nav__link">
+        PlannerBucket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/planner/PlannerPlan/" class="md-nav__link">
+        PlannerPlan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/planner/PlannerTask/" class="md-nav__link">
+        PlannerTask
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_8" type="checkbox" id="__nav_5_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_8">
+          Power Platform
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Power Platform" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          Power Platform
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/power-platform/PPPowerAppsEnvironment/" class="md-nav__link">
+        PPPowerAppsEnvironment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/power-platform/PPTenantSettings/" class="md-nav__link">
+        PPTenantSettings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_9" type="checkbox" id="__nav_5_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_9">
+          Security & Compliance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Security & Compliance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_9">
+          <span class="md-nav__icon md-icon"></span>
+          Security & Compliance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCAuditConfigurationPolicy/" class="md-nav__link">
+        SCAuditConfigurationPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCCaseHoldPolicy/" class="md-nav__link">
+        SCCaseHoldPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCCaseHoldRule/" class="md-nav__link">
+        SCCaseHoldRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCComplianceCase/" class="md-nav__link">
+        SCComplianceCase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCComplianceSearch/" class="md-nav__link">
+        SCComplianceSearch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCComplianceSearchAction/" class="md-nav__link">
+        SCComplianceSearchAction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCComplianceTag/" class="md-nav__link">
+        SCComplianceTag
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCDLPCompliancePolicy/" class="md-nav__link">
+        SCDLPCompliancePolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCDLPComplianceRule/" class="md-nav__link">
+        SCDLPComplianceRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCDeviceConditionalAccessPolicy/" class="md-nav__link">
+        SCDeviceConditionalAccessPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCDeviceConfigurationPolicy/" class="md-nav__link">
+        SCDeviceConfigurationPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCFilePlanPropertyAuthority/" class="md-nav__link">
+        SCFilePlanPropertyAuthority
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCFilePlanPropertyCategory/" class="md-nav__link">
+        SCFilePlanPropertyCategory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCFilePlanPropertyCitation/" class="md-nav__link">
+        SCFilePlanPropertyCitation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCFilePlanPropertyDepartment/" class="md-nav__link">
+        SCFilePlanPropertyDepartment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCFilePlanPropertyReferenceId/" class="md-nav__link">
+        SCFilePlanPropertyReferenceId
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCFilePlanPropertySubCategory/" class="md-nav__link">
+        SCFilePlanPropertySubCategory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCLabelPolicy/" class="md-nav__link">
+        SCLabelPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCRetentionCompliancePolicy/" class="md-nav__link">
+        SCRetentionCompliancePolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCRetentionComplianceRule/" class="md-nav__link">
+        SCRetentionComplianceRule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCRetentionEventType/" class="md-nav__link">
+        SCRetentionEventType
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCSensitivityLabel/" class="md-nav__link">
+        SCSensitivityLabel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCSupervisoryReviewPolicy/" class="md-nav__link">
+        SCSupervisoryReviewPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/security-compliance/SCSupervisoryReviewRule/" class="md-nav__link">
+        SCSupervisoryReviewRule
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_10" type="checkbox" id="__nav_5_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_10">
+          SharePoint
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SharePoint" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_10">
+          <span class="md-nav__icon md-icon"></span>
+          SharePoint
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOAccessControlSettings/" class="md-nav__link">
+        SPOAccessControlSettings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOApp/" class="md-nav__link">
+        SPOApp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOBrowserIdleSignout/" class="md-nav__link">
+        SPOBrowserIdleSignout
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOHomeSite/" class="md-nav__link">
+        SPOHomeSite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOHubSite/" class="md-nav__link">
+        SPOHubSite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOOrgAssetsLibrary/" class="md-nav__link">
+        SPOOrgAssetsLibrary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOPropertyBag/" class="md-nav__link">
+        SPOPropertyBag
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOSearchManagedProperty/" class="md-nav__link">
+        SPOSearchManagedProperty
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOSearchResultSource/" class="md-nav__link">
+        SPOSearchResultSource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOSharingSettings/" class="md-nav__link">
+        SPOSharingSettings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOSite/" class="md-nav__link">
+        SPOSite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOSiteAuditSettings/" class="md-nav__link">
+        SPOSiteAuditSettings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOSiteDesign/" class="md-nav__link">
+        SPOSiteDesign
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOSiteDesignRights/" class="md-nav__link">
+        SPOSiteDesignRights
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOSiteGroup/" class="md-nav__link">
+        SPOSiteGroup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOSiteScript/" class="md-nav__link">
+        SPOSiteScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOStorageEntity/" class="md-nav__link">
+        SPOStorageEntity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOTenantCDNPolicy/" class="md-nav__link">
+        SPOTenantCDNPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOTenantCdnEnabled/" class="md-nav__link">
+        SPOTenantCdnEnabled
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOTenantSettings/" class="md-nav__link">
+        SPOTenantSettings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOTheme/" class="md-nav__link">
+        SPOTheme
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sharepoint/SPOUserProfileProperty/" class="md-nav__link">
+        SPOUserProfileProperty
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_11" type="checkbox" id="__nav_5_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_11">
+          Teams
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teams" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_11">
+          <span class="md-nav__icon md-icon"></span>
+          Teams
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsCallingPolicy/" class="md-nav__link">
+        TeamsCallingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsChannel/" class="md-nav__link">
+        TeamsChannel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsChannelTab/" class="md-nav__link">
+        TeamsChannelTab
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsChannelsPolicy/" class="md-nav__link">
+        TeamsChannelsPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsClientConfiguration/" class="md-nav__link">
+        TeamsClientConfiguration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsEmergencyCallRoutingPolicy/" class="md-nav__link">
+        TeamsEmergencyCallRoutingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsEmergencyCallingPolicy/" class="md-nav__link">
+        TeamsEmergencyCallingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsGuestCallingConfiguration/" class="md-nav__link">
+        TeamsGuestCallingConfiguration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsGuestMeetingConfiguration/" class="md-nav__link">
+        TeamsGuestMeetingConfiguration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsGuestMessagingConfiguration/" class="md-nav__link">
+        TeamsGuestMessagingConfiguration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsMeetingBroadcastConfiguration/" class="md-nav__link">
+        TeamsMeetingBroadcastConfiguration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsMeetingBroadcastPolicy/" class="md-nav__link">
+        TeamsMeetingBroadcastPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsMeetingConfiguration/" class="md-nav__link">
+        TeamsMeetingConfiguration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsMeetingPolicy/" class="md-nav__link">
+        TeamsMeetingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsMessagingPolicy/" class="md-nav__link">
+        TeamsMessagingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsPstnUsage/" class="md-nav__link">
+        TeamsPstnUsage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsTeam/" class="md-nav__link">
+        TeamsTeam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsTenantDialPlan/" class="md-nav__link">
+        TeamsTenantDialPlan
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsUpgradeConfiguration/" class="md-nav__link">
+        TeamsUpgradeConfiguration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsUpgradePolicy/" class="md-nav__link">
+        TeamsUpgradePolicy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsUser/" class="md-nav__link">
+        TeamsUser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsVoiceRoute/" class="md-nav__link">
+        TeamsVoiceRoute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/teams/TeamsVoiceRoutingPolicy/" class="md-nav__link">
+        TeamsVoiceRoutingPolicy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          About
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/why/" class="md-nav__link">
+        Why Microsoft365DSC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/microsoft/Microsoft365DSC/blob/master/CHANGELOG.md" target="_blank" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/license/" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/community-resources/" class="md-nav__link">
+        Community Resources
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#microsoft-graph-permissions" class="md-nav__link">
+    Microsoft Graph Permissions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/microsoft/Microsoft365DSC/tree/Dev/docs/docs/user-guide/get-started/complete-story.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<p>This article is a complete guide to installing, deploying and using Microsoft365DSC. Microsoft365DSC is an open-source solution that’s available for free on <a href='https://github.com/Microsoft/Microsoft365DSC'>GitHub</a>. It is led by Microsoft engineers and maintained by the community. Official documentation for the solution is available on the official site at <a href="https://Microsoft365DSC.com">https://Microsoft365DSC.com</a>. Microsoft365DSC is the declarative form of Microsoft 365 tenant’s configuration. It is to the Microsoft 365 environment what Azure Resource Manager templates (ARM) are to Azure.  It allows you to represent your tenant’s configuration-as-code using <a href="https://docs.microsoft.com/en-us/powershell/dsc/overview/dscforengineers?view=dsc-1.1">PowerShell Desired State Configuration (DSC)</a>, use it to automatically configure your Microsoft tenants in the described state, take snapshots of existing tenants into DSC declarative code, generate reports out of those snapshots, continuously monitor all your Microsoft 365 tenants for configuration drifts and be alerted when drifts are detected, clone the configuration of an existing tenant onto another and compare the configuration between one or multiple tenants.</p>
+<h1 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h1>
+<p>Microsoft365DSC is supported for PowerShell version 5.1 and 7.1. Support for newer versions of PowerShell is not yet offered since these have now decoupled the DSC engine into its own separate module and require additional work from the team. It is however on the roadmap as a priority item for the later part of Calendar Year of 2022.</p>
+<p>To get the best experience, it is recommended that you use the <a href="https://www.microsoft.com/en-ca/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab">Windows Terminal</a> to run and execute Microsoft365DSC. All screenshots provided in this article are using the Windows Terminal. This tool allows you to quickly switch between PowerShell versions and provide better support for icons and symbols that are used throughout Microsoft365DSC’s experience.</p>
+<h2 id="microsoft-graph-permissions">Microsoft Graph Permissions<a class="headerlink" href="#microsoft-graph-permissions" title="Permanent link">&para;</a></h2>
+<p>Most components of the Microsoft365DSC solution are using the Microsoft Graph PowerShell SDK under the cover to authenticate and interact with Microsoft 365. By default, if you are using Microsoft365DSC without using your own Azure Active Directory application instance, the tool will automatically use the Microsoft Graph PowerShell application instance to authenticate.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2547149/149792907-fb23e825-d1a5-4391-b67d-3e13e576dbd8.png" /></p>
+<p>In order to be able to interact with these components, you need to grant your application or the Microsoft Graph PowerShell one the proper permissions against the Microsoft Graph scope. To determine what permission what permissions are required by a given component that uses Microsoft Graph, you can use the <strong>Get-M365DSCCompiledPermissionList</strong> cmdlet and pass in the list of parameters for which you wish to grant permissions for.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2547149/149797417-379d8590-852d-4888-85f7-3b0f7bf7460f.png" /></p>
+<p>Doing so will return an object with two properties. The ReadPermissions property contains a list of the minimal permissions that need to be granted for the app to be able to read information about the selected components. These are the permissions you want to grant if you are taking a snapshot of the configuration of an existing tenant. The second property, UpdatePermissions, contains the minimal permissions required to interact with and configure the selected components. You will need to grant your application these permissions if you are trying to apply a configuration onto a tenant.</p>
+<p>If you are trying to interact with all available components in Microsoft365DSC, you can get a complete picture of all permissions required across all resources by running the following line of PowerShell.</p>
+<p><div class="highlight"><pre><span></span><code>Get-M365DSCCompiledPermissionList -ResourceNameList (Get-M365DSCAllResources)
+</code></pre></div>
+<img alt="image" src="https://user-images.githubusercontent.com/2547149/149797453-3f7ea11c-f7d3-4431-b65f-2fe1ab815871.png" /></p>
+<p>The <strong>Get-M365DSCAllResources</strong> cmdlet will return a list of all components available inside of the Microsoft365DSC solution which will then by passed in the Get-M365DSCCompiledPermissionList cmdlet which will compile the resulting permissions needed for the list of components it receives, in occurrence all of them. These permissions need to be granted to your application instance, either using the Azure portal or automating the process via PowerShell.</p>
+<p>We provide an easy way of consenting permissions to the Microsoft Graph PowerShell application in your tenant with the <strong>Update-M365DSCAllowedGraphScopes</strong> cmdlet. This cmdlet accepts either a list of components to grant the permissions for or can grant it for all resources if the <strong>-All</strong> switch is used. You also need to specify what type of permissions, Read or Update, you wish to grant it using the <strong>-Type</strong> parameter.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2547149/149797611-409a38ae-953e-4fc4-9751-4183c7ad7497.png" /></p>
+<p>Executing the cmdlet will prompt you to authenticate using an administrator account that has access to consent permissions to Azure AD applications in your environment.</p>
+<h1 id="how-to-install">How to Install<a class="headerlink" href="#how-to-install" title="Permanent link">&para;</a></h1>
+<p>While the source code of the solution is open-sourced on GitHub at https://GitHub.com/Microsoft.Microsoft365DSC, the releases of the solutions are being published to the <a href="https://www.powershellgallery.com/packages/Microsoft365DSC/">PowerShell Gallery</a>. This means that the tool can be installed onto any machine by running the following command:
+<div class="highlight"><pre><span></span><code>Install-Module Microsoft365DSC -Force
+</code></pre></div>
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149797724-c4f87cc1-2fa1-4812-81ef-c31c69c26376.png" /></p>
+<p>Executing this command can take a minute or two. Microsoft365DSC depends on several other modules to function properly. For example, it uses the <a href="https://www.powershellgallery.com/packages/MSCloudLoginAssistant/">MSCloudLoginAssistant</a> module to delegate all authentication logic to the various workloads, it leverages a dozen <a href="https://www.powershellgallery.com/packages?q=Microsoft.Graph">Microsoft Graph PowerShell module</a> to interact with various configuration settings, etc. Newer versions of Microsoft365DSC no longer download all the required prerequisites by default. When you install the Microsoft365DSC, you only get the core components. It is our recommendation that you run the following command to update all dependencies on the system after installing the module:</p>
+<p><div class="highlight"><pre><span></span><code>Update-M365DSCDependencies
+</code></pre></div>
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149797877-bb59cb8b-6d39-4f14-8912-ca2a1f1ea851.png" /></p>
+<p>Running the above command will automatically read the list of dependencies from the [root]/Dependencies/Manifest.psd1 file, check to see if they are installed on the machine with the proper version, and if not it will automatically download them and install them from the PowerShell Gallery.</p>
+<p>Depending on your configuration and on the version of PowerShell you are using, the installed modules may be put in different locations. The process of installing a PowerShell module from the PowerShell Gallery really just comes down to downloading the files from the gallery as a zip, extracting them and copying to a location on the system that is associated with PowerShell via environment variables. The following command will allow you to view the version of any given PowerShell module on a system along with its associated version:
+<div class="highlight"><pre><span></span><code>Get-Module Microsoft365DSC -ListAvailable | select ModuleBase, Version
+</code></pre></div>
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149798129-051dba57-95b8-4916-8109-5d5445fd0737.png" /></p>
+<h1 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h1>
+<p>It is also very important for users to understand the authentication process of Microsoft365DSC. The solution supports connecting to the various workloads for either applying the configuration, monitoring it for configuration drifts or taking a snapshot of an existing configuration. It supports authenticating using either a set of credentials for a user, to use a Service Principal by specifying parameters such as an Azure Active Directory (AD) Application ID, or a combination of both.</p>
+<p>The recommendation is to use Service Principal whenever possible because it offers the most granular levels of security and doesn’t introduce the risk of having to send high privileged credentials across the wire to authenticate. However, not all workloads supported by Microsoft365DSC are currently able to handle Service Principal authentication. Currently, the Security and Compliance and Microsoft Teams workload unfortunately do not support authenticating using the Service Principal of an Azure Active Directory Application. The following picture gives you an overview of what authentication mechanisms are supported by each workload and what underlying module is being used to authenticate for each.
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149798164-6e95848a-9405-40f5-aa3c-dc0063ba02d3.png" /></p>
+<p>As you can see from the picture above, Credentials while being the least preferred option for security reasons, is the only option that works across all supported workloads. It is also important to clarify the difference between the Teams and the Skype for Business Online entries in the picture above. If we take a look a few months back, to manage Microsoft Teams using PowerShell you needed two different modules: one for the collaboration part of Microsoft Teams (the MicrosoftTeams PowerShell module) and one for the Skype For Business components (SkypeOnlineConnector). While the collaboration aspect of Teams, which includes Teams and Channels is accessible through Service Principal authentication, other components such as all Teams administrative policies are still only available through the Skype for Business part of the new combined MicrosoftTeams module and therefore don’t work with service principal authentication.</p>
+<p>We are having discussions with the various product groups that are responsible for these PowerShell modules inside of Microsoft to have better consistency across all workloads on how to authenticate. Items highlighted in green in the table above, are workloads for which we use the <a href="https://github.com/microsoftgraph/msgraph-sdk-powershell">Microsoft Graph PowerShell SDK</a> to authenticate against. Our plan is to update the underlying logic of every component inside of Microsoft365DSC to leverage that SDK as new APIs become available on Microsoft Graph.</p>
+<p>It is possible for a configuration to use a mix of credentials and Service Principals to authenticate against the various workloads. For example, if you decide to keep a master configuration for all of you tenant’s configuration, you could have Azure AD components use the Service Principal of an app you’ve created to authenticate, and further down in the configuration have your Security and Compliance components use credentials. That approach is perfectly fine, but we’d recommend to try and split different workloads across different configuration files in this case to make it easier to manage.</p>
+<p>It is also important to note that we’ve added logic inside of the command that allows you to take a snapshot of your current’s tenant configuration to warn you when the components you are trying to capture can’t be accessed based on the authentication model you’ve selected. For example, if you are trying to take a snapshot of both Azure AD and Security and Compliance components, but are authenticating using a Service Principal, the tool will warn you that the Security and Compliance components can’t be captured and that they will be ignored. In this case, the resulting capture would only contain the Azure AD components because those are the only ones the tool can get access to using Service Principal.
+<img alt="image" src="https://user-images.githubusercontent.com/2547149/149798269-70a82229-f8c9-4645-bf57-5419b721ea92.png" /></p>
+<h1 id="taking-a-snapshot-of-existing-tenant">Taking a Snapshot of Existing Tenant<a class="headerlink" href="#taking-a-snapshot-of-existing-tenant" title="Permanent link">&para;</a></h1>
+<p>The first thing that most folks using the solution will want to do is take a snapshot of an existing tenant they have access to and that they are familiar with. As soon as you install the Microsoft365DSC module on a system, it will automatically get access to run the <strong>Export-M365DSCConfiguragtion</strong> PowerShell cmdlet which is the main command for initiating a snapshot of an existing configuration. In previous versions of the module, simply running the above cmdlet would automatically launch a Graphical User Interface that would allow you to pick and choose the components you wanted to capture the configuration for as part of your snapshot and initiate the capture process. Newer versions of the module have moved to an unattended process by default, meaning that running the cmdlet will expect additional parameters by default and will then attempt to initiate the snapshot process automatically without further human interaction.</p>
+<p>Initiating the snapshot process via the <strong>Export-M365DSCConfiguration</strong> cmdlet will begin by authenticating against all required workloads. The first thing it will do is compile a list of all components it is about to capture and figure out what workload they are part of. Then it will automatically authenticated against each one using the authentication parameters provided.</p>
+<h2 id="web-based-user-interface">Web Based User Interface<a class="headerlink" href="#web-based-user-interface" title="Permanent link">&para;</a></h2>
+<p>While the default process has changed with recent versions of the module, you can still use a newly revamped, web-based User Interface to help you build the PowerShell command to execute based on the components you wish to capture. To launch this new web interface, simply use the <strong>-LaunchWebUI</strong> switch when calling the Export-M365DSCConfiguration cmdlet. This will automatically launch a new web browser interface and navigate you to https://Export.Microsoft365DSC.com
+<img alt="image" src="https://user-images.githubusercontent.com/2547149/149798448-3a01db84-3a6e-4a97-9d65-11bfcaca20eb.png" /></p>
+<p>From the interface, simply select the components you want, and click on the <strong>Generate</strong> button at the top right. This will open a new prompt that will allow you to copy the PowerShell command you need to run to capture a snapshot of the selected components via Microsoft365DSC. Simply copy this command and paste it in your PowerShell console to initiate the capture process.
+<img alt="image" src="https://user-images.githubusercontent.com/2547149/149798483-d8dac9ea-5498-4870-ab60-be497111e92e.png" /></p>
+<h2 id="unattended-capture">Unattended Capture<a class="headerlink" href="#unattended-capture" title="Permanent link">&para;</a></h2>
+<p>As mentioned above, Microsoft365DSC now defaults to an unattended capture process when running the Export-M365DSCConfiguration cmdlet. To quickly get started, simply open a new PowerShell console and type in the cmdlet. By default, if you don’t provide any additional parameters to the cmdlet, it will try to use credentials to authenticate against the various workloads. In the case where no additional authentication parameters are provided, Microsoft365DSC will prompt you for credentials and will use those credentials to authenticate throughout the capture process.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2547149/149798516-916a822a-242e-4288-b1d9-f24b1812ed3c.png" /><img alt="image" src="https://user-images.githubusercontent.com/2547149/149798528-b8580be6-62c6-4ce0-9193-2f928f4f3791.png" /></p>
+<p>You could always pass in the credentials in as a variable, which will bypass the credential prompt and automatically initiate the export process when calling the cmdlet.
+E.g.</p>
+<div class="highlight"><pre><span></span><code>$creds = Get-Credential
+Export-M365DSCConfiguration -Credential $creds
+</code></pre></div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2547149/149798704-328e8355-fafc-4748-a277-1224009b0515.png" /></p>
+<p>The same process applies if you are trying to authenticate using a Service Principal. In this case you would need to pass in the ApplicationID and TenantID parameter and decide whether to use an ApplicationSecret or a CertificateThumbprint.
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149798742-569902f8-84fa-4360-82e7-fcb334f69b5d.png" />
+<img alt="image" src="https://user-images.githubusercontent.com/2547149/149798752-7335cc56-d09a-485d-8408-9ff12ebd89f6.png" /></p>
+<p>It is important to understand that the resulting file that contains the captured configuration will also implement the same authentication mechanism used by the capture process. For example, if you used credentials to capture the configuration, the resulting file will contain logic to capture credentials when it gets executed and every component it defines will also implement the <strong>Credential</strong> parameter.
+<img alt="image" src="https://user-images.githubusercontent.com/2547149/149798788-d9e1f08b-6e18-46d3-b9ca-652c6c1a18bf.png" /></p>
+<p>In comparison, if you used a Service Principal to do the export, the resulting file will implement logic to receive information about the Azure AD application instance to use and every component defined within the file will as well.
+  <img alt="image" src="https://user-images.githubusercontent.com/2547149/149798810-9e7ba15d-e8ae-4f64-8340-e4e950ef31cf.png" /></p>
+<p>As we can see from the image above, the Service Principal fields' values are coming from the Configuration Data file that also get stored along the configuration file during the snapshot process. If you take a look at the folder where the resulting files were stored, you should see a file named ConfigurationData.psd1. This is where the value for the parameters above are defined.
+<img alt="image" src="https://user-images.githubusercontent.com/2547149/149798970-fff1404b-6f48-4186-8acb-30299816de9d.png" /></p>
+<p>It is also important to note, the resulting file will always contain random GUID for the name of the resources in the DSC configuration. These are random and are only used to ensure we don’t have resource naming conflicts inside the configuration. They can be replaced by anything meaningful, as long as you don’t have two components of the same resource type named the same across your configuration. Names are meaningless in the world of DSC and are only used as a primary key when compiling your configuration.
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149799004-4e57c166-df00-4b43-a554-add1f03dee3e.png" /></p>
+<h2 id="available-parameters">Available Parameters<a class="headerlink" href="#available-parameters" title="Permanent link">&para;</a></h2>
+<p>The Microsoft365DSC tenant's configuration snapshot feature offers several options you can use to better control the output capture. This section provides an overview of each additional parameter that is available for the <strong>Export-M365DSCConfiguration</strong> cmdlet and how they can be used during the capture process</p>
+<h3 id="launchwebui">LaunchWebUI<a class="headerlink" href="#launchwebui" title="Permanent link">&para;</a></h3>
+<p>As mentioned above, the moment this switch is present when calling the Export-M365DSCConfiguration cmdlet it will launch new browser window and navigate to the export user interface at https://export.microsoft365dsc.com.</p>
+<h3 id="filename">FileName<a class="headerlink" href="#filename" title="Permanent link">&para;</a></h3>
+<p>This allows you to specify how you wish the resulting file to be named. Specify the name of the file, including the extension (e.g. .ps1).
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149799116-4942a0e9-4865-48be-a32e-7de683ea9264.png" /></p>
+<p>Omitting to specify this parameter will name the resulting file as M365TenantConfig.ps1</p>
+<h3 id="configurationname">ConfigurationName<a class="headerlink" href="#configurationname" title="Permanent link">&para;</a></h3>
+<p>This parameter allows you to specify how the DSC configuration object, inside of the exported configuration file will be named.
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149799157-cb03fb1e-d3b6-4a39-b33c-959b1e3ccbde.png" /></p>
+<p>Omitting to specify this parameter will result in the configuration object to be named as the file’s name (e.g. M365TenantConfig).</p>
+<h3 id="path">Path<a class="headerlink" href="#path" title="Permanent link">&para;</a></h3>
+<p>Specifies the location where the resulting file will be stored. Omitting to specify this parameter will prompt the user to provide the destination path at the end of the capture process.
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149799199-5f8e454b-9d05-42da-9a7c-5a22cf39fe46.png" /></p>
+<h3 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h3>
+<p>This parameter accepts an array containing the names of the components you want to capture as part of your snapshot. Omitting this parameter will default the capture process to capture all components that are part of the default components list (see parameter Mode).
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149799217-4f2c2bf8-1ceb-4e6c-a9a4-d8d989c1a05a.png" /></p>
+<h3 id="workloads">Workloads<a class="headerlink" href="#workloads" title="Permanent link">&para;</a></h3>
+<p>This component accepts an array containing the names of various workloads you wish to capture the components for as part of your snapshot process.  Users need to specify the acronym of the workloads, which can be any of:
+* <strong>AAD</strong> – Azure Active Directory
+* <strong>EXO</strong> – Exchange Online
+* <strong>O365</strong> – Office 365 administration
+* <strong>Intune</strong> – Intune
+* <strong>OD</strong> – OneDrive
+* <strong>Planner</strong> – Planner
+* <strong>PP</strong> – Power Platform
+* <strong>SC</strong> – Security and Compliance
+* <strong>SPO</strong> – SharePoint Online
+* <strong>Teams</strong> – Microsoft Teams
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149799340-8019c321-5115-4edd-8c2e-d98588fb09bb.png" /></p>
+<p>By default, specifying a workload will only export components that are part of the default component list (see Mode). If you want to capture every component available for a given workload, you will need to combine this parameter with <strong>-Mode Full</strong>.</p>
+<h3 id="mode">Mode<a class="headerlink" href="#mode" title="Permanent link">&para;</a></h3>
+<p>This parameter allows users to specify what set of components they wish to capture as part of their snapshot process. By default, Microsoft365DSC will exclude some components from the capture process either because these are likely to take a very long time to export (e.g. SPOPropertyBag) or that they are more related to data than actual configuration settings (e.g. Planner Tasks, SPOUserProfileProperty, etc.). Available modes are:
+* Lite
+* Default
+* Full
+And off course, omitting to specify this parameter will default to the <strong>default</strong> mode.
+To keep track of what resources are available in what mode, Microsoft365DSC defines two global variables which contain the list of resources unique to this extraction mode: <strong>$Global:DefaultComponents</strong> and <strong>$Global:FullComponents</strong>
+<img alt="image" src="https://user-images.githubusercontent.com/2547149/149799484-cda8c84e-971e-446a-b247-b58c40f08a6a.png" /></p>
+<p>This means that the <strong>Lite</strong> extraction mode will contain all resources with the exception of those listed in Default and Full. The <strong>Default</strong> mode will include all resources from the Lite mode, plus the SPOApp and SPOSiteDesign components, and <strong>Full</strong> will include every resource available in the project.</p>
+<h3 id="maxprocesses">MaxProcesses<a class="headerlink" href="#maxprocesses" title="Permanent link">&para;</a></h3>
+<p>There are a few components inside of Microsoft365DSC for which parallelism has been implemented as part of their snapshot process to improve speed. This parameter allows user to specify how many parallel threads should be created during the capture process. Components leveraging parallelism are: SPOPropertyBag, SPOUserProfileProperty and TeamsUser. The specified value for this parameter has to be between <strong>1</strong> and <strong>100</strong>. Instances of the components will be equally divided amongst the various threads.
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149799619-509d7526-eba0-4ccc-b028-aeb012a2275a.png" />
+<img alt="image" src="https://user-images.githubusercontent.com/2547149/149799632-06ae6b61-4bbc-4cf8-8102-1c008d805205.png" /></p>
+<p>While there are advantages to implementing multithreading for the snapshot process, there are many disadvantages as well such as not being able to properly view ongoing progress inside threads and added complexity to the design of the resources. After weighting in the pros can cons of implementing this approach across all components to speed up the entire capture process, we’ve opted to keep the design of the resources simpler (no use parallelism) for maintenance purposes and to ensure users have a consistent way of view progress during the snapshot process.</p>
+<h3 id="generateinfo">GenerateInfo<a class="headerlink" href="#generateinfo" title="Permanent link">&para;</a></h3>
+<p>This parameter allows users to specify whether or not comments should be added as part of the exported file to provide additional information about the various types of components captured.
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149799667-9cfc5e09-c7c4-460e-979e-3c3f1129abc2.png" /></p>
+<h1 id="deploying-configurations">Deploying Configurations<a class="headerlink" href="#deploying-configurations" title="Permanent link">&para;</a></h1>
+<p>This section explains how you can take a Microsoft365DSC configuration file you’ve written (or captured using the snapshot feature) and apply the settings it defines onto a Microsoft 365 tenant. It is very important to understand that at this stage, we are using PowerShell Desired State (DSC) out-of-the-box and that the process of applying a DSC configuration is not something specific to Microsoft365DSC.</p>
+<h2 id="compiling-and-validating-the-configuration">Compiling and Validating the Configuration<a class="headerlink" href="#compiling-and-validating-the-configuration" title="Permanent link">&para;</a></h2>
+<p>The first step in trying to deploy a DSC configuration is to compile the configuration file into what we call a Managed Object Format (MOF) file. To do so, simply execute the .ps1 file that contains your configuration. The process of compiling your configuration will also perform some level of validation on the configuration such as ensuring that every component defined in the file has all of their mandatory parameters defined and that there are no typos in components or property names. If the compilation process is successful, you should see a mention that the .mof file was created. This file gets created in the same location where your configuration file is located by default and will create a new folder based on the name of the configuration object defined within your file.
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149799734-204e64d7-19d5-4f5b-a62c-90fcb04213a0.png" />
+<img alt="image" src="https://user-images.githubusercontent.com/2547149/149799745-ff76dcc4-a4d4-4c43-8f76-9f29873e5d18.png" /><img alt="image" src="https://user-images.githubusercontent.com/2547149/149799755-5880b2c7-545a-45c5-b4d7-36c99ecaff31.png" /></p>
+<h1 id="securing-your-compiled-configuration">Securing your Compiled Configuration<a class="headerlink" href="#securing-your-compiled-configuration" title="Permanent link">&para;</a></h1>
+<p>In the case where you are using credentials to authenticate to your tenant, you will be prompted to provide credentials at compilation time for your configuration. By default, these credentials will be stored as plain text in the resulting MOF file, which is a big security concern.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2547149/149799792-6656a848-cc46-487c-9c77-a141aec63e30.png" /></p>
+<p>To remediate to this, PowerShell DSC lets us use an encryption certificate to encrypt information about credentials in the MOF files. To make this process easier for users, Microsoft365DSC defines a function named <strong>Set-M365DSCAgentCertificateConfiguration</strong> which will automatically generate an encryption certificate and configure the PowerShell DSC engine on the system to use it for encrypting the MOF files. The cmdlet will return the Thumbprint for the newly generated certificate.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2547149/149799811-a6f64a8b-bcb8-4cdc-8c80-d7d68849ea25.png" /></p>
+<p>You can also have the cmdlet generate the private key for the certificate by using the <strong>-GeneratePFX</strong> switch and specifying a password with the <strong>-Password</strong> parameter. This will require you to also specify the <strong>-ForceRenew</strong> parameter so that a brand new certificate gets emitted.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2547149/149799898-7a5b36ad-634a-41c3-aaa3-abc1ca7d8848.png" /></p>
+<p>Once the certificate has been configured every time you do a snapshot of an existing tenant’s configuration, a new M365DSC.cer certificate file will be stored in the same repository as the configuration files. The ConfigurationData.psd1 will also contain a new entry under the localhost node that will point to this certificate, effectively telling DSC to use this file to encrypt credentials when compiling.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2547149/149799919-7b594207-f435-491d-a424-c3f15447294c.png" /></p>
+<p>If you compile your configuration using the new certificate and take a look at your MOF file, you should see that the password for the credential object was successfully encrypted and is no longer showing in plaintext.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2547149/149799949-163c0ba6-8bd9-4ec5-acab-9597ae77966f.png" /></p>
+<h2 id="deploying-the-configuration">Deploying the Configuration<a class="headerlink" href="#deploying-the-configuration" title="Permanent link">&para;</a></h2>
+<p>To initiate the deployment of a configuration onto a Microsoft 365 tenant, you need to use the out-of-the-box cmdlet provided by PowerShell DSC named <strong>Start-DSCConfiguration</strong>. By default, this cmdlet will execute as a background job. If you wish to monitor the execution of the process, you need to use the <strong>-Wait</strong> switch, which will make the process synchronous. We also recommend using the <strong>-Verbose</strong> switch with the command to get additional details on the progression of the process. The cmdlet takes in the path to the folder that contains the compiled .MOF file.</p>
+<p>e.g.
+<div class="highlight"><pre><span></span><code>Start-DSCConfiguration C:\DemoM365DSC\M365TenantConfig -Wait -Verbose -Force
+</code></pre></div></p>
+<p>Executing the cmdlet will automatically authenticate against the affected workload using the authentication parameters provided at compilation time and will apply the configuration settings defined in the file.
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149800095-28010b6b-8b7c-4c2b-85fd-f0614294fb50.png" /></p>
+<p>It is normal for this process to take several minutes if not hours to complete, based on how many components are defined in your configuration. It is important to understand that once the configuration completes its deployment, this will configure the PowerShell DSC engine on the current system to due frequent checks against your Microsoft 365 tenant to check for configuration drifts. By default, the engine will wake up every 15 minutes (minimum value possible). For more details on how to configure this, please refer to <a href="https://docs.microsoft.com/en-us/powershell/dsc/managing-nodes/metaconfig?view=dsc-1.1">Configuring the Local Configuration Manager</a>. If you simply want to apply the configuration on the tenant as a one off and prevent the system form doing frequent checks for configuration drifts, you can remove the configuration you’ve applied from memory by running the following PowerShell commands:
+<div class="highlight"><pre><span></span><code>Stop-DSCConfiguration -Force
+Remove-DSCConfigurationDocument -Stage Current
+</code></pre></div>
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149800178-ea830872-446a-4e97-9cda-068d9eef7266.png" /></p>
+<h1 id="monitoring-for-configuration-drifts">Monitoring for Configuration Drifts<a class="headerlink" href="#monitoring-for-configuration-drifts" title="Permanent link">&para;</a></h1>
+<p>Once a configuration has been applied to a Microsoft 365 tenant using Microsoft365DSC, the local system will perform regular checks to analyze the configuration of the remote tenant against what its desired state should be and detect any configuration drifts. This feature comes from PowerShell DSC out-of-the-box and is not something specific to Microsoft365DSC. By default the DSC engine on the system where the configuration was applied from will check for configuration drifts every 15 minutes. If a drift in configuration is detected, it will log it in Event Viewer on the machine by default. Detected drifts will get logged under the <strong>M365DSC</strong> log journal in Event Viewer. Microsoft365DSC provide very detailed entries in event viewer that help you identify exactly in what component a drift was detected as well as what property was detected to have drifted.
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149800220-a67f31ef-3cc3-46bd-b462-3099ce0c89d6.png" /></p>
+<p>Just like for any DSC module, you can also configure the DSC engine to automatically attempt to automatically fix detected drift and bring the tenant back into its desired state. This is referred to as the DSC configuration mode. To learn more about how you can configure the DSC engine to automatically fix detected drift, please refer to <a href="https://docs.microsoft.com/en-us/powershell/dsc/managing-nodes/metaconfig?view=dsc-1.1">Configuring the Local Configuration Manager</a>.</p>
+<h1 id="cloning-tenants-configuration">Cloning Tenant's Configuration<a class="headerlink" href="#cloning-tenants-configuration" title="Permanent link">&para;</a></h1>
+<p>This feature of Microsoft365DSC is not a true standalone feature; it is a combination of existing features to unlock a new scenario for users. Since Microsoft365DSC is able to take a snapshot of any Microsoft 365 tenant and because we can deploy a Microsoft365DSC configuration onto any tenant, we can easily clone the configuration of any tenant over another one (or another set of tenants). When you take a snapshot of an existing tenant, the extracted configuration file doesn’t contain any information that is specific to the source tenant. It abstracts it all into variables, which make the configuration generic instead of unique for a particular tenant. It is then at compilation time that you provide information about the environment onto which this configuration will be applied to.</p>
+<p>For example, let's assume you are trying to clone the configuration of Tenant A onto Tenant B. You would start by capturing the existing configuration of tenant A using credentials or a Service Principal that exists and has rights on Tenant A. This will generate the configuration file containing all the configuration settings for Tenant A. Then at compilation time, when trying to compile the extracted configuration into a MOF file, you will need to provide credentials or a Service Principal that has access to Tenant B. Then all that is left to do is to deploy the configuration onto Tenant B to have all the configurations settings from tenant A applied onto it.</p>
+<h1 id="generating-reports-from-configurations">Generating Reports from Configurations<a class="headerlink" href="#generating-reports-from-configurations" title="Permanent link">&para;</a></h1>
+<p>Microsoft365DSC makes it very easy to generate user friendly reports from any configuration, whether you wrote it yourself or generated it using the configuration snapshot feature. The solution allows you to generate both HTML and Excel reports from existing files. To generate and Excel reports however, you need to have Office installed on the machine that you are trying to generate the report from. To generate reports, simply use the <strong>New-M365DSCReportFromConfiguration</strong> and specify what type of report you want using the <strong>Type</strong> parameter (specify HTML or Excel). The cmdlet also requires you to specify the full path to the .ps1 configuration file you want to generate the report from using the <strong>-ConfigurationPath</strong> parameter and specify where you wish to store the generated report using the <strong>-OutputPath</strong> parameter.</p>
+<p>Trying to generate an Excel report from a configuration will automatically launch the Excel client as part of the process. Users will see data being loaded progressively into it and once the generation processes has finished, columns will automatically be resized to fit the content. The report will also automatically put the key mandatory parameter (e.g. primary key) of each resource in bold and do some styling of the output. report.
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149800400-e44efd1c-77a9-4b9c-8c43-c3b05f139714.png" /></p>
+<p>Generating an HTML report will generate a different result. It will create the report file at the location specified by the <strong>OutputPath</strong> parameter, but it won’t actually launch the report in a browser. The <strong>New-M365DSCReportFromConfiguration</strong> cmdlet, when used for HTML reports will also return the raw HTML content of the report as seen in the image below.
+ <img alt="image" src="https://user-images.githubusercontent.com/2547149/149800454-466920fd-0fb0-48fd-b5b2-873c3cb00b28.png" />
+<img alt="image" src="https://user-images.githubusercontent.com/2547149/149800462-c3ab5699-4991-48b3-89cc-3f48e36d8a86.png" /></p>
+<h1 id="comparing-configurations">Comparing Configurations<a class="headerlink" href="#comparing-configurations" title="Permanent link">&para;</a></h1>
+<p>The Microsoft365DSC solution has a built-in engine to compare configurations and generate a delta report in HTML that shows the discrepancies between the two. You can either use it to compare the configuration between 2 files or you can use it to compare a configuration against another tenant and see how it defers from that tenant’s current configuration.</p>
+<h2 id="comparing-2-configuration-files">Comparing 2 Configuration Files<a class="headerlink" href="#comparing-2-configuration-files" title="Permanent link">&para;</a></h2>
+<p>Using the <strong>New-M365DSCDeltaReport</strong> cmdlet, you can specify the two configuration files you wish to compare using the <strong>-Source</strong> and <strong>-Destination</strong> parameters. You then need to specify where you wish to store the resulting HTML report using the <strong>-OutputPath</strong> parameter. Consider the following example, where I've taken two configuration snapshots of my tenant over a period of 6 months apart. I wish to determine what configuration settings have changed over that period of time. Using the <strong>New-M365DSCDeltaReport</strong> cmdlet, I can easily compare the two and generate a delta report as shown in the image below.
+<img alt="image" src="https://user-images.githubusercontent.com/2547149/149800668-d0c6ab84-703f-4b46-a17e-8603388ca190.png" /></p>
+<p>You can also decide to customize the generated report by injecting your own HTML into its header. To do so, simply specify the location of the HTML file to inject in the header of the report using the <strong>-HeaderFilePath</strong> parameter. The example shown in the following picture shows how to add your customer header to a delta report.
+<img alt="image" src="https://user-images.githubusercontent.com/2547149/149800692-614c5463-906f-4d1f-9acf-d52c0794121f.png" /></p>
+<h2 id="comparing-a-configuration-against-another-tenant">Comparing a Configuration Against Another Tenant<a class="headerlink" href="#comparing-a-configuration-against-another-tenant" title="Permanent link">&para;</a></h2>
+<p>Using Microsoft365DSC, you can compare any configuration file against the current configuration of any other given Microsoft 365 tenant. This can be very useful in comparing the configuration between two tenants in scenarios like mergers and acquisitions. For example, let’s assume you are trying to compare the configuration of Tenant A with the one from Tenant B. You can start by taking a snapshot of both tenants, and then use this feature to compare it against the configuration of Tenant B using the <strong>New-M365DSCDeltaReport</strong> cmdlet.</p>
+<h1 id="integrating-with-azure-devops">Integrating with Azure DevOPS<a class="headerlink" href="#integrating-with-azure-devops" title="Permanent link">&para;</a></h1>
+<p>Microsoft365DSC takes all its sense when used as part of DevOPS processes within the enterprise. You can use it to automate your Microsoft 365 Change Management process so that any requested configuration changes to tenants get tracked via systems like Azure DevOPS and GitHub and use them to automate the deployment of your changes across your various tenants when a change is approved. While this article doesn’t cover the process of integrating Microsoft365DSC with these systems, our team has written a great <a href="https://office365dsc.azurewebsites.net/Pages/Resources/Whitepapers/Managing Microsoft 365 with Microsoft365Dsc and Azure DevOps.pdf">whitepaper</a> to help you get started with integrating Microsoft365DSC with Azure DevOPS.</p>
+<h1 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h1>
+<p>As mentioned at the beginning of this document, Microsoft365DSC is an open-source solution led by Microsoft engineers and maintained by the community. This means that it is not supported via Microsoft's support. If you need help getting started, need to report a bug or request new features to be added, you will need to use the Issues section of the official <a href="https://github.com/microsoft/microsoft365DSC">GitHub</a> repository to do so. The team is meeting on a weekly basis to review items and prioritize fixes. If you require immediate attention for a blocking issue and that you have a Premiere or Unified support contract with Microsoft, you can always talk to your account team to leverage hours in your contract to have an engineer assigned to expedite the process.</p>
+<h1 id="telemetry">Telemetry<a class="headerlink" href="#telemetry" title="Permanent link">&para;</a></h1>
+<p>By default, Microsoft365DSC is sending telemetry back to Microsoft to help the team improve the solution in a pro-active manner. Information is all captured using Azure Application Insights. We are capturing information about what operations are being called the more often, information about any errors encountered, authentication type most commonly used, PowerShell versions used, etc. Users can decide to stop sending telemetry back to Microsoft at any given point by opting out. To do so, simply run the following PowerShell command:
+<div class="highlight"><pre><span></span><code>Set-M365DSCTelemetryOption -Enabled $false
+</code></pre></div>
+<strong>Note</strong> that this is a per machine setting. Therefore, if you are executing Microsoft365DSC on different systems within your organization, this command will have to be executed on each one.
+Organizations can also decide to capture telemetry from Microsoft365DSC using their own Application Insights account (without sending any data back to Microsoft). The <strong>Set-M365DSCTelemetryOption</strong> cmdlet lets you specify what Application Insights account you wish to send telemetry back to using the <strong>-InstrumentationKey</strong> parameter.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/2547149/149800998-71bf37ff-ff82-4627-8893-7465d689f0fe.png" /></p>
+<p>Users can also specify a custom name for their solution using the <strong>-ProjectName</strong> parameter. This will ensure that every telemetry reported back to the Application Insights account gets tagged with the project name under <strong>customDimensions.ProjectName</strong>.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../../home/what-is-M365DSC/" class="md-footer__link md-footer__link--prev" aria-label="Previous: What is Microsoft365DSC?" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              What is Microsoft365DSC?
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../advanced/create-blueprint/" class="md-footer__link md-footer__link--next" aria-label="Next: Advanced" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Advanced
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Microsoft365DSC
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/Microsoft365DSC" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/channel/UCveScabVT6pxzqYgGRu17iw" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.powershellgallery.com/packages/Microsoft365DSC/" target="_blank" rel="noopener" title="www.powershellgallery.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.instant", "search.share"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.01de222e.min.js"></script>
+      
+    
+  </body>
+</html>
